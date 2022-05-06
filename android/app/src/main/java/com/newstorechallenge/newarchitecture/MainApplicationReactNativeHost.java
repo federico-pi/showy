@@ -1,4 +1,4 @@
-package com.newstorechallenge.newarchitecture;
+package com.newstore.challenge.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.newstorechallenge.BuildConfig;
-import com.newstorechallenge.newarchitecture.components.MainComponentsRegistry;
-import com.newstorechallenge.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.newstore.challenge.BuildConfig;
+import com.newstore.challenge.newarchitecture.components.MainComponentsRegistry;
+import com.newstore.challenge.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
