@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 
+import RNBootSplash from 'react-native-bootsplash';
 import {
   Colors,
   DebugInstructions,
@@ -53,6 +54,13 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    // Performing multiple sync and async function before dismissing the splashscreen
+    const init = async () => {};
+
+    init().finally(async () => await RNBootSplash.hide({ fade: true }));
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
