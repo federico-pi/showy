@@ -1,0 +1,22 @@
+{
+  "conventionalCommits.scopes": [
+    "app",
+    "ios",
+    "android",
+    "types",
+    "api",
+    "assets",
+    "core",
+    "features",
+    "helpers",
+    "hooks",
+    "mocks",
+    "shared",
+    "stores",
+    "styles",
+    "navigation",
+    "enums",
+    "models",
+    "tasks"
+  ]
+}
