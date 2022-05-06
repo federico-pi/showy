@@ -1,57 +1,48 @@
-import remoteConfig from '@react-native-firebase/remote-config';
 import axios from 'axios';
 import qs from 'qs';
 import { UseQueryResult, useQuery } from 'react-query';
 
 import { BASE_URL } from '~env';
-import { useHeaders, Headers } from '~hooks';
 import { QueriesEnums } from '~shared/enums';
-import { ResponseSchemaVoidReadDemaDataDtoDemaRequestError } from '~shared/models/api';
-
-const BASEURL = remoteConfig().getString('BASE_URL');
 
 /**
- * Getting the prescription details
+ * Getting the data from tvmaze api
+ * @param params
+ * @param searchType
+ * @returns Promise<void>
  */
 export async function getTvmazeData(
-  nre: string,
-  citizenTaxCode: string,
-  headers: Headers['headers']
-): Promise<ResponseSchemaVoidReadDemaDataDtoDemaRequestError> {
-  const url = `${BASEURL.length ? BASEURL : BASE_URL}/dema/get-data`;
-
-  console.log(url);
-
-  const params = {
-    nre: nre.toUpperCase(),
-    citizenTaxCode: citizenTaxCode.toUpperCase(),
-  };
+  params: Record<string, string>,
+  searchType: string
+): Promise<void> {
+  const url = `${BASE_URL}/${searchType}`;
 
   return axios
     .get(url, {
       params,
       paramsSerializer: (parameters) => qs.stringify(parameters),
-      headers,
     })
     .then((res) => res.data);
 }
 
 /**
- * Using the prescription data
+ * Using the data from tvmaze
+ * @param params
+ * @param searchType
+ * @param options
+ * @returns
  */
 export function useTvmazeData(
-  nre: string,
-  citizenTaxCode: string,
+  params: Record<string, string>,
+  searchType: string,
   options?: any
-): UseQueryResult<ResponseSchemaVoidReadDemaDataDtoDemaRequestError> {
-  const { headers } = useHeaders();
-
+): UseQueryResult<void> {
   return useQuery(
-    QueriesEnums.QUERY_KEYS.DEMA,
-    () => getDemaData(nre, citizenTaxCode, headers),
+    QueriesEnums.QUERY_KEYS.TVMAZE,
+    () => getTvmazeData(params, searchType),
     {
       ...options,
-      enabled: !!nre && !!citizenTaxCode,
+      enabled: !!searchType,
     }
   );
 }
