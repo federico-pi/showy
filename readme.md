@@ -17,6 +17,7 @@ After the clone of the project (via HTTPS or SSH, it's your choose), you need to
 
 ```bash
 $ yarn install
+$ cd ios && pod install && cd ..
 ```
 
 To run the project on a device/emulator while developing, run:
