@@ -1,0 +1,25 @@
+{
+  "buttons": {
+    "skip": "Skip",
+    "back": "Back",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "reset": "Reset",
+    "more": "Show more",
+    "cancel": "Cancel",
+    "accept": "Accept",
+    "reject": "Reject",
+    "delete": "Delete",
+    "add": "Add",
+    "retry": "Try again",
+    "apply": "Apply",
+    "ok": "Ok",
+    "download": "Download"
+  },
+  "errors": {
+    "generic": "An error occurred!"
+  },
+  "results": {
+    "request": "Request sent successfully"
+  }
+}
