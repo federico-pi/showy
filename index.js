@@ -1,9 +1,12 @@
-/**
- * @format
- */
+import 'react-native-url-polyfill/auto';
+import 'intl-pluralrules';
+import 'react-native-gesture-handler';
+import './i18n';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import { AppRegistry } from 'react-native';
 
-AppRegistry.registerComponent(appName, () => App);
+import { APP_NAME } from '~env';
+
+import App from './src/App';
+
+AppRegistry.registerComponent(APP_NAME, () => App);
