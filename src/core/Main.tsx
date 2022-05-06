@@ -1,22 +1,17 @@
 import React, { ReactElement } from 'react';
-import { Text, View } from 'react-native';
 
-import { useTranslation } from 'react-i18next';
+import { NavigationContainer } from '@react-navigation/native';
 
-import { MainStyles } from '~styles/components';
-
-const { MAIN: styles } = MainStyles;
+import { Navigator } from './navigation/Navigator';
 
 /**
  * Main application component
  */
 function Main(): ReactElement {
-  const { t } = useTranslation('misc');
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.description}>{t('welcome')}</Text>
-    </View>
+    <NavigationContainer>
+      <Navigator />
+    </NavigationContainer>
   );
 }
 
