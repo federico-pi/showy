@@ -7,18 +7,21 @@ import {
   View,
 } from 'react-native';
 
-import { useNavigation } from '@react-navigation/native';
+import { AxiosResponse } from 'axios';
 import { Controller, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { getTvmazeData } from '~api';
 import { SearchLens } from '~assets/images';
 import { AppHelpers } from '~helpers';
-import { ApiEnums, FormsEnums, RoutesEnums } from '~shared/enums';
+import { ApiEnums, FormsEnums } from '~shared/enums';
+import { ApiModels } from '~shared/models';
 import { COLORS } from '~styles/defaults';
 import { HomeFeatureStyles } from '~styles/features';
 
-const { HOME: styles } = HomeFeatureStyles;
+import { List } from './components/List';
+
+const { HOME: styles, LIST: listStyles } = HomeFeatureStyles;
 
 /**
  * The main home screen component
@@ -26,9 +29,11 @@ const { HOME: styles } = HomeFeatureStyles;
 function Home(): ReactElement {
   const { t } = useTranslation(['home', 'commons']);
 
-  const navigation = useNavigation();
-
   const [isFetching, setIsFetching] = useState(false);
+
+  const [shows, setShows] = useState<ApiModels.SearchResponse[] | undefined>(
+    undefined
+  );
 
   /**
    * The form handler
@@ -46,15 +51,13 @@ function Home(): ReactElement {
     setIsFetching(true);
 
     // For transitioning loader smoothly
-    await AppHelpers.sleep(2500);
+    await AppHelpers.sleep(1750);
 
     try {
       await getTvmazeData({ q: search }, ApiEnums.SEARCH_TYPES.SEARCH).then(
-        (res) => {
-          console.log(JSON.stringify(res.data));
-
+        (res: AxiosResponse<ApiModels.TvmazeSearchResponse[]>) => {
           if (res.data.length) {
-            return navigation.navigate(RoutesEnums.ROUTES.DETAILS);
+            return setShows(res.data as ApiModels.SearchResponse[]);
           }
 
           Alert.alert(t('home:errors.empty-search'));
@@ -70,39 +73,40 @@ function Home(): ReactElement {
 
   return (
     <View style={[styles.container, styles.content]}>
-      {isFetching && (
-        <ActivityIndicator color={COLORS.PRIMARY} size={'large'} />
-      )}
+      {isFetching && <ActivityIndicator color={COLORS.PRIMARY} size={26} />}
       {!isFetching && (
-        <View style={styles.searchWrapper}>
-          <Controller
-            control={control}
-            name={FormsEnums.FORM_FIELDS.SEARCH} // 'search'
-            rules={{ required: true }}
-            render={({ field: { value, onChange } }) => (
-              <TextInput
-                style={styles.input}
-                placeholder={t('home:placeholder')}
-                value={value}
-                onChangeText={onChange}
-                autoCorrect={false}
-                autoCapitalize={'none'}
-              />
-            )}
-          />
-          <TouchableOpacity
-            disabled={!watch().search}
-            style={[
-              styles.iconContainer,
-              !watch().search && {
-                ...styles.iconContainer,
-                backgroundColor: COLORS.GRAY,
-              },
-            ]}
-            onPress={handleSubmit(onSubmit)}
-          >
-            <SearchLens stroke={COLORS.WHITE} />
-          </TouchableOpacity>
+        <View style={[listStyles.container, styles.content]}>
+          <View style={styles.searchWrapper}>
+            <Controller
+              control={control}
+              name={FormsEnums.FORM_FIELDS.SEARCH} // 'search'
+              rules={{ required: true }}
+              render={({ field: { value, onChange } }) => (
+                <TextInput
+                  style={styles.input}
+                  placeholder={t('home:placeholder')}
+                  value={value}
+                  onChangeText={onChange}
+                  autoCorrect={false}
+                  autoCapitalize={'none'}
+                />
+              )}
+            />
+            <TouchableOpacity
+              disabled={!watch().search}
+              style={[
+                styles.iconContainer,
+                !watch().search && {
+                  ...styles.iconContainer,
+                  backgroundColor: COLORS.GRAY,
+                },
+              ]}
+              onPress={handleSubmit(onSubmit)}
+            >
+              <SearchLens stroke={COLORS.WHITE} />
+            </TouchableOpacity>
+          </View>
+          {shows && <List shows={shows} />}
         </View>
       )}
     </View>
