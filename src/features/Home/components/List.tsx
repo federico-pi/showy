@@ -3,8 +3,6 @@ import { FlatList, ListRenderItemInfo, View } from 'react-native';
 
 import _ from 'lodash';
 
-import { SharedHelpers } from '~helpers';
-
 import { ApiModels } from '~shared/models';
 import { HomeFeatureStyles } from '~styles/features';
 
@@ -45,24 +43,32 @@ function List({ shows }: ListProps): ReactElement {
   );
 
   /**
+   * Generic key extractor
+   */
+  const keyExtractor = useCallback(
+    (item: unknown, index: number) => index.toString(),
+    []
+  );
+
+  /**
    * Rendering the card items
    */
-  const renderItem = useCallback(
-    ({ item, index }: ListRenderItemInfo<ApiModels.SearchResponse>) => {
-      const isLast =
-        filteredShows(shows).length > 1 &&
-        filteredShows(shows).length - 1 === index;
+  const renderItem = ({
+    item,
+    index,
+  }: ListRenderItemInfo<ApiModels.SearchResponse>) => {
+    const isLast =
+      filteredShows(shows).length > 1 &&
+      filteredShows(shows).length - 1 === index;
 
-      return <Card item={item} isLast={isLast} />;
-    },
-    [filteredShows, shows]
-  );
+    return <Card item={item} isLast={isLast} />;
+  };
 
   return (
     <FlatList
       data={filteredShows(shows)}
       ItemSeparatorComponent={() => <View style={styles.spacer} />}
-      keyExtractor={SharedHelpers.keyExtractor()}
+      keyExtractor={keyExtractor}
       renderItem={renderItem}
       horizontal
       showsHorizontalScrollIndicator={false}

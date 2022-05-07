@@ -84,7 +84,11 @@ function Home(): ReactElement {
               render={({ field: { value, onChange } }) => (
                 <TextInput
                   style={styles.input}
-                  placeholder={t('home:placeholder')}
+                  placeholder={
+                    shows
+                      ? t('home:research-placeholder')
+                      : t('home:placeholder')
+                  }
                   value={value}
                   onChangeText={onChange}
                   autoCorrect={false}

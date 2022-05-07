@@ -31,6 +31,8 @@ function Details(): ReactElement {
 
   const { show } = route.params.item;
 
+  console.log(JSON.stringify(show));
+
   return (
     <View style={[styles.container, styles.content]}>
       <TouchableOpacity
@@ -61,6 +63,13 @@ function Details(): ReactElement {
       <View style={styles.info}>
         <Text numberOfLines={1} style={styles.title}>
           {show.name}
+        </Text>
+        <Text numberOfLines={3} style={styles.summary}>
+          {show.summary
+            .replace('<p>', '')
+            .replace('</p>', '')
+            .replace('<b>', '')
+            .replace('</b>', '')}
         </Text>
       </View>
     </View>

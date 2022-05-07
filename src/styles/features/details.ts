@@ -12,8 +12,9 @@ type Details =
       chevronContainer: ViewStyle;
       image: ViewStyle;
       gradient: ViewStyle;
-      title: TextStyleExtended;
       info: ViewStyle;
+      title: TextStyleExtended;
+      summary: TextStyleExtended;
     }
   | StylesModels.AnyModel;
 
@@ -52,6 +53,11 @@ export const DETAILS: Details = StyleSheet.create({
   title: {
     fontFamily: FONTS.POPPINS_BOLD_700,
     fontSize: 24,
+    color: COLORS.OPAQUE,
+  },
+  summary: {
+    fontFamily: FONTS.POPPINS_REGULAR_400,
+    fontSize: 16,
     color: COLORS.OPAQUE,
   },
 });

@@ -22,10 +22,3 @@ export function capitalizeWords(sentence: string): string {
     })
     .join(' ');
 }
-
-/**
- * Generic key extractor
- */
-export function keyExtractor() {
-  return (item: unknown, index: number): string => index.toString();
-}
