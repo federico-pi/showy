@@ -31,8 +31,6 @@ function Details(): ReactElement {
 
   const { show } = route.params.item;
 
-  console.log(JSON.stringify(show));
-
   return (
     <View style={[styles.container, styles.content]}>
       <TouchableOpacity
