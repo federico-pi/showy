@@ -1,20 +1,15 @@
 import React from 'react';
 
-import renderer, { create, act } from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 
 import App from '../src/App';
 
-it('renders correctly with defaults', async () => {
-  const app = renderer.create(<App />).toJSON();
+it('renders correctly with defaults', () => {
+  let app;
 
-  expect(app).toMatchSnapshot();
-});
-
-it('has 1 child', async () => {
-  let tree;
   act(() => {
-    tree = create(<App />);
+    app = create(<App />).toJSON();
   });
 
-  expect(tree?.toJSON().children.length).toBe(1);
+  expect(app).toMatchSnapshot();
 });

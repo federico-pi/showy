@@ -20,7 +20,10 @@ const App = () => {
     init().finally(() => {
       let timeout: ReturnType<typeof setTimeout>;
 
-      timeout = setTimeout(() => RNBootSplash.hide({ fade: true }), 2250);
+      timeout = setTimeout(
+        async () => await RNBootSplash.hide({ fade: true }),
+        2250
+      );
 
       return () => clearTimeout(timeout);
     });
