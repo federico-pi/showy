@@ -1,5 +1,5 @@
-import * as QueriesModels from './queries.models';
+import * as ApiModels from './api.models';
 import * as ResponseModels from './response.models';
 import * as RoutesModels from './routes.models';
 
-export { QueriesModels, ResponseModels, RoutesModels };
+export { ApiModels, ResponseModels, RoutesModels };
