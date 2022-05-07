@@ -53,6 +53,7 @@
     "proxy-polyfill": "^0.3.2",
     "qs": "^6.10.3",
     "react": "17.0.2",
+    "react-hook-form": "^7.30.0",
     "react-i18next": "^11.16.8",
     "react-native": "0.68.1",
     "react-native-bootsplash": "^4.1.5",
