@@ -1,14 +1,8 @@
-import { Dimensions, ViewStyle } from 'react-native';
+import { Dimensions, ViewStyle, StyleSheet } from 'react-native';
 
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { StylesModels } from '~shared/models';
 
-import {
-  COLORS,
-  FONTS,
-  SIZES,
-  TextStyleExtended,
-  UTILS,
-} from '~styles/defaults';
+import { COLORS, FONTS, TextStyleExtended, UTILS } from '~styles/defaults';
 
 const { width } = Dimensions.get('window');
 
@@ -20,9 +14,9 @@ type Home =
       input: TextStyleExtended;
       iconContainer: ViewStyle;
     }
-  | EStyleSheet.AnyObject;
+  | StylesModels.AnyModel;
 
-export const HOME: Home = EStyleSheet.create({
+export const HOME: Home = StyleSheet.create({
   container: {
     flex: 1,
   },
@@ -34,22 +28,22 @@ export const HOME: Home = EStyleSheet.create({
   searchWrapper: {
     flexDirection: UTILS.FLEX_ROW,
     backgroundColor: COLORS.SILVER,
-    paddingVertical: SIZES.REM_8,
-    paddingHorizontal: SIZES.REM_16,
-    borderRadius: SIZES.REM_12,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 12,
     width: width - 48,
     justifyContent: UTILS.FLEX_BETWEEN,
   },
   input: {
     fontFamily: FONTS.POPPINS_SEMIBOLD_600,
-    fontSize: SIZES.REM_16,
+    fontSize: 16,
     color: COLORS.OPAQUE,
   },
   iconContainer: {
-    marginLeft: SIZES.REM_12,
-    padding: SIZES.REM_8,
+    marginLeft: 12,
+    padding: 8,
     backgroundColor: COLORS.PRIMARY,
-    borderRadius: '12 + 32',
+    borderRadius: 20, // 'half of icon size + padding'
     justifyContent: UTILS.CENTER,
     alignItems: UTILS.CENTER,
   },

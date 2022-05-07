@@ -1,14 +1,14 @@
-import { ViewStyle } from 'react-native';
+import { ViewStyle, StyleSheet } from 'react-native';
 
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { StylesModels } from '~shared/models';
 
 type Details =
   | {
       container: ViewStyle;
     }
-  | EStyleSheet.AnyObject;
+  | StylesModels.AnyModel;
 
-export const DETAILS: Details = EStyleSheet.create({
+export const DETAILS: Details = StyleSheet.create({
   container: {
     flex: 1,
   },

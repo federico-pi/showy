@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react';
 
 import RNBootSplash from 'react-native-bootsplash';
-import EStyleSheet from 'react-native-extended-stylesheet';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { Main } from '~core/Main';
-import { SIZES } from '~styles/defaults';
-
-EStyleSheet.build({ $rem: SIZES.BUILD_BASE });
 
 // The React Query client for caching the data
 const queryClient = new QueryClient();

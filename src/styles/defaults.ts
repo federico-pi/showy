@@ -13,35 +13,6 @@ export enum COLORS {
   PRIMARY = '#EF1B53',
 }
 
-export enum SIZES {
-  BUILD_BASE = 16,
-  REM_8 = '0.5rem',
-  REM_9 = '0.5625',
-  REM_10 = '0.625rem',
-  REM_11 = '0.6875rem',
-  REM_12 = '0.75rem',
-  REM_13 = '0.8125rem',
-  REM_14 = '0.875rem',
-  REM_15 = '0.9375rem',
-  REM_16 = 'rem',
-  REM_17 = '1.0625rem',
-  REM_18 = '1.125rem',
-  REM_19 = '1.1875rem',
-  REM_20 = '1.25rem',
-  REM_21 = '1.3125rem',
-  REM_22 = '1.375rem',
-  REM_23 = '1.4375rem',
-  REM_24 = '1.5rem',
-  REM_25 = '1.5625rem',
-  REM_26 = '1.625rem',
-  REM_27 = '1.6875rem',
-  REM_28 = '1.75rem',
-  REM_29 = '1.8125rem',
-  REM_30 = '1.875rem',
-  REM_31 = '1.9375rem',
-  REM_32 = '2rem',
-}
-
 export enum FONTS {
   POPPINS_THIN_100 = 'Poppins-Thin',
   POPPINS_EXTRALIGHT_200 = 'Poppins-ExtraLight',
