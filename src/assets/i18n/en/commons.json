@@ -14,10 +14,11 @@
     "retry": "Try again",
     "apply": "Apply",
     "ok": "Ok",
-    "download": "Download"
+    "download": "Download",
+    "submit": "Submit"
   },
   "errors": {
-    "generic": "An error occurred!"
+    "generic": "Oh no. Something went wrong!"
   },
   "results": {
     "request": "Request sent successfully"
