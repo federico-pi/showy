@@ -44,7 +44,7 @@ export const HOME: Home = StyleSheet.create({
   searchWrapper: {
     flexDirection: UTILS.FLEX_ROW,
     backgroundColor: COLORS.SILVER,
-    paddingVertical: 8,
+    paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 12,
     width: width - 48,

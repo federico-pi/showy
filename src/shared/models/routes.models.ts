@@ -1,3 +1,5 @@
+import { ApiModels } from '.';
+
 /**
  * The shape of the routes
  */
@@ -11,5 +13,5 @@ export interface Routes {
  */
 export type RootStackParamList = {
   home: undefined;
-  details: undefined;
+  details: { item: ApiModels.SearchResponse };
 };

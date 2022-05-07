@@ -5,8 +5,9 @@ export type TextStyleExtended = Omit<TextStyle, 'fontSize'> & {
 };
 
 export enum COLORS {
+  TRANSPARENT = 'transparent',
   WHITE = '#fff',
-  SILVER = '#F5F5F5',
+  SILVER = '#F2F2F2',
   GRAY = '#848A94',
   OPAQUE = '#191D30',
   BLACK = '#000',

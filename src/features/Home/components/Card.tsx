@@ -28,11 +28,11 @@ function Card({ item, isLast }: CardProps): ReactElement {
   return (
     <TouchableOpacity
       style={[styles.container, isLast && styles.lastItem]}
-      onPress={() => navigation.navigate(RoutesEnums.ROUTES.DETAILS)}
+      onPress={() => navigation.navigate(RoutesEnums.ROUTES.DETAILS, { item })} // Transferring item to details screen as param
     >
       <Image
         style={styles.image}
-        resizeMode="cover"
+        resizeMode={'cover'}
         source={{
           uri: show.image?.medium,
         }}
