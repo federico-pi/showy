@@ -9,7 +9,6 @@ import {
 
 import { AxiosResponse } from 'axios';
 import { Controller, useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 
 import { getTvmazeData } from '~api';
 import { SearchLens } from '~assets/images';
@@ -27,8 +26,6 @@ const { HOME: styles, LIST: listStyles } = HomeFeatureStyles;
  * The main home screen component
  */
 function Home(): ReactElement {
-  const { t } = useTranslation(['home', 'commons']);
-
   const [isFetching, setIsFetching] = useState(false);
 
   const [shows, setShows] = useState<ApiModels.SearchResponse[] | undefined>(
@@ -44,7 +41,7 @@ function Home(): ReactElement {
     console.error(e);
     reset();
     setIsFetching(false);
-    Alert.alert(t('commons:errors.generic'));
+    Alert.alert('Oh no. Something went wrong!');
   };
 
   const onSubmit = async ({ search }: Record<string, string>) => {
@@ -60,7 +57,7 @@ function Home(): ReactElement {
             return setShows(res.data as ApiModels.SearchResponse[]);
           }
 
-          Alert.alert(t('home:errors.empty-search'));
+          Alert.alert("Couldn't find any show for your search, try again!");
         }
       );
 
@@ -83,7 +80,7 @@ function Home(): ReactElement {
               <TextInput
                 style={styles.input}
                 placeholder={
-                  shows ? t('home:research-placeholder') : t('home:placeholder')
+                  shows ? 'Perform another search' : 'Search for a show'
                 }
                 value={value}
                 onChangeText={onChange}

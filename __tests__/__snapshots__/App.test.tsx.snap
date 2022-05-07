@@ -113,7 +113,7 @@ exports[`renders correctly with defaults 1`] = `
                 autoCapitalize="none"
                 autoCorrect={false}
                 onChangeText={[Function]}
-                placeholder="home:placeholder"
+                placeholder="Search for a show"
                 style={
                   Object {
                     "color": "#191D30",
