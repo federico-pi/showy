@@ -22,7 +22,7 @@ declare global {
 }
 
 /**
- * Root navigator component
+ * Root stack navigator component
  */
 function Navigator(): ReactElement {
   return (

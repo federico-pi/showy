@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import qs from 'qs';
 import { UseQueryResult, useQuery } from 'react-query';
 
@@ -15,23 +15,21 @@ import { ApiModels } from '~shared/models';
 export async function getTvmazeData(
   params: Record<string, string>,
   searchType: ApiModels.SearchTypes
-): Promise<ApiModels.TvmazeSearchResponse[]> {
+): Promise<AxiosResponse<ApiModels.TvmazeSearchResponse[]>> {
   let url: string;
 
   /**
-   * Iplemented in a way that could be scaled to multiple requests
+   * Iplemented API call in a way that could be easily scaled to multiple requests
    */
   switch (searchType) {
     case ApiEnums.SEARCH_TYPES.SEARCH:
     default:
       url = `${BASE_URL}/search/shows`;
 
-      return axios
-        .get(url, {
-          params,
-          paramsSerializer: (parameters) => qs.stringify(parameters),
-        })
-        .then((res) => res.data as ApiModels.SearchResponse[]);
+      return axios.get(url, {
+        params,
+        paramsSerializer: (parameters) => qs.stringify(parameters),
+      }) as Promise<AxiosResponse<ApiModels.SearchResponse[]>>;
   }
 }
 
@@ -46,7 +44,7 @@ export function useTvmazeData(
   params: Record<string, string>,
   searchType: ApiModels.SearchTypes,
   options?: any
-): UseQueryResult<Promise<ApiModels.TvmazeSearchResponse[]>> {
+): UseQueryResult<Promise<AxiosResponse<ApiModels.TvmazeSearchResponse[]>>> {
   return useQuery(
     QueriesEnums.QUERY_KEYS.TVMAZE,
     () => getTvmazeData(params, searchType),

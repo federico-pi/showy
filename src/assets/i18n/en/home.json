@@ -1,3 +1,6 @@
 {
-  "placeholder": "Search shows"
+  "placeholder": "Search shows",
+  "errors": {
+    "empty-search": "Couldn't find any show for your search, try again!"
+  }
 }

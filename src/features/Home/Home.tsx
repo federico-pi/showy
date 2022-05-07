@@ -51,11 +51,13 @@ function Home(): ReactElement {
     try {
       await getTvmazeData({ q: search }, ApiEnums.SEARCH_TYPES.SEARCH).then(
         (res) => {
-          console.log(JSON.stringify(res));
+          console.log(JSON.stringify(res.data));
 
-          if (res.length) {
-            navigation.navigate(RoutesEnums.ROUTES.DETAILS);
+          if (res.data.length) {
+            return navigation.navigate(RoutesEnums.ROUTES.DETAILS);
           }
+
+          Alert.alert(t('home:errors.empty-search'));
         }
       );
 
