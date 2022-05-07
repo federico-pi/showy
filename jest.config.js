@@ -5,4 +5,5 @@ module.exports = {
       'identity-obj-proxy',
     '\\.svg': '<rootDir>/__mocks__/svgMock.js',
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };
