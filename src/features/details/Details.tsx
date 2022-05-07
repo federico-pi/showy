@@ -3,6 +3,7 @@ import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
 
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
+import { Rating } from 'react-native-ratings';
 
 import { ChevronLeft } from '~assets/images';
 import { ApiModels } from '~shared/models';
@@ -62,13 +63,25 @@ function Details(): ReactElement {
         <Text numberOfLines={1} style={styles.title}>
           {show.name}
         </Text>
-        <Text numberOfLines={3} style={styles.summary}>
+        <Text
+          style={styles.summary}
+          numberOfLines={show.rating.average ? 3 : 4}
+        >
           {show.summary
             .replace('<p>', '')
             .replace('</p>', '')
             .replace('<b>', '')
             .replace('</b>', '')}
         </Text>
+        {show.rating.average && (
+          <Rating
+            style={styles.rating}
+            showRating={false}
+            startingValue={+show.rating.average / 2}
+            readonly
+            imageSize={24}
+          />
+        )}
       </View>
     </View>
   );

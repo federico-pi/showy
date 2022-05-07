@@ -15,6 +15,7 @@ type Details =
       info: ViewStyle;
       title: TextStyleExtended;
       summary: TextStyleExtended;
+      rating: ViewStyle;
     }
   | StylesModels.AnyModel;
 
@@ -44,10 +45,11 @@ export const DETAILS: Details = StyleSheet.create({
   },
   gradient: {
     width, // Full screen dimensions
-    height: 70,
+    height: 60,
   },
   info: {
     padding: 16,
+    paddingTop: 8,
     flex: 0.2,
   },
   title: {
@@ -59,5 +61,9 @@ export const DETAILS: Details = StyleSheet.create({
     fontFamily: FONTS.POPPINS_REGULAR_400,
     fontSize: 16,
     color: COLORS.OPAQUE,
+    marginTop: 4,
+  },
+  rating: {
+    marginTop: 10,
   },
 });

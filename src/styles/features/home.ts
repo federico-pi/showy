@@ -19,6 +19,7 @@ type Home =
 type List =
   | {
       container: ViewStyle;
+      grow: ViewStyle;
       spacer: ViewStyle;
     }
   | StylesModels.AnyModel;
@@ -75,6 +76,9 @@ export const LIST: List = StyleSheet.create({
   container: {
     height: 320,
     justifyContent: UTILS.FLEX_BETWEEN,
+  },
+  grow: {
+    flexGrow: 1,
   },
   spacer: {
     width: 2,

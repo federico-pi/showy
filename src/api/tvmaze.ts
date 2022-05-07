@@ -22,7 +22,7 @@ export async function getTvmazeData(
    * Iplemented API call in a way that could be easily scaled to multiple requests
    */
   switch (searchType) {
-    case ApiEnums.SEARCH_TYPES.SEARCH:
+    case ApiEnums.GET_TYPES.SEARCH:
     default:
       url = `${BASE_URL}/search/shows`;
 

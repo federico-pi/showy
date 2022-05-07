@@ -3,7 +3,7 @@ import { ApiEnums } from '~shared/enums';
 /**
  * The props allowed for the search type param
  */
-export type SearchTypes = ApiEnums.SEARCH_TYPES;
+export type SearchTypes = ApiEnums.GET_TYPES;
 
 /**
  * The response based on search types

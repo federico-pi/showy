@@ -32,8 +32,21 @@ function List({ shows }: ListProps): ReactElement {
 
       showsUnfiltered.forEach((show: ApiModels.SearchResponse) => {
         const { show: item } = show;
-        if (!!item.image && !!item.name && !_.has(list, item.name)) {
-          list.push(show);
+        /**
+         * Making sure each show has an image, a name, a summary, and isn't already in the list
+         */
+        if (
+          !!item.image &&
+          !!item.name &&
+          !!item.summary &&
+          (!_.has(list, item.name) || !_.has(list, item.id))
+        ) {
+          // Pushing shows with a rating at the start
+          if (item.rating.average) {
+            return list.unshift(show);
+          }
+
+          return list.push(show);
         }
       });
 
@@ -66,12 +79,15 @@ function List({ shows }: ListProps): ReactElement {
 
   return (
     <FlatList
+      style={styles.grow}
       data={filteredShows(shows)}
       ItemSeparatorComponent={() => <View style={styles.spacer} />}
       keyExtractor={keyExtractor}
       renderItem={renderItem}
       horizontal
       showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+      onEndReachedThreshold={0.2}
     />
   );
 }

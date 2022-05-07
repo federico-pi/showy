@@ -54,7 +54,7 @@ function Home(): ReactElement {
     await AppHelpers.sleep(1750);
 
     try {
-      await getTvmazeData({ q: search }, ApiEnums.SEARCH_TYPES.SEARCH).then(
+      await getTvmazeData({ q: search }, ApiEnums.GET_TYPES.SEARCH).then(
         (res: AxiosResponse<ApiModels.TvmazeSearchResponse[]>) => {
           if (res.data.length) {
             return setShows(res.data as ApiModels.SearchResponse[]);
@@ -73,46 +73,42 @@ function Home(): ReactElement {
 
   return (
     <View style={[styles.container, styles.content]}>
-      {isFetching && <ActivityIndicator color={COLORS.PRIMARY} size={26} />}
-      {!isFetching && (
-        <View style={[listStyles.container, styles.content]}>
-          <View style={styles.searchWrapper}>
-            <Controller
-              control={control}
-              name={FormsEnums.FORM_FIELDS.SEARCH} // 'search'
-              rules={{ required: true }}
-              render={({ field: { value, onChange } }) => (
-                <TextInput
-                  style={styles.input}
-                  placeholder={
-                    shows
-                      ? t('home:research-placeholder')
-                      : t('home:placeholder')
-                  }
-                  value={value}
-                  onChangeText={onChange}
-                  autoCorrect={false}
-                  autoCapitalize={'none'}
-                />
-              )}
-            />
-            <TouchableOpacity
-              disabled={!watch().search}
-              style={[
-                styles.iconContainer,
-                !watch().search && {
-                  ...styles.iconContainer,
-                  backgroundColor: COLORS.GRAY,
-                },
-              ]}
-              onPress={handleSubmit(onSubmit)}
-            >
-              <SearchLens stroke={COLORS.WHITE} />
-            </TouchableOpacity>
-          </View>
-          {shows && <List shows={shows} />}
+      <View style={[listStyles.container, styles.content]}>
+        <View style={styles.searchWrapper}>
+          <Controller
+            control={control}
+            name={FormsEnums.FORM_FIELDS.SEARCH} // 'search'
+            rules={{ required: true }}
+            render={({ field: { value, onChange } }) => (
+              <TextInput
+                style={styles.input}
+                placeholder={
+                  shows ? t('home:research-placeholder') : t('home:placeholder')
+                }
+                value={value}
+                onChangeText={onChange}
+                autoCorrect={false}
+                autoCapitalize={'none'}
+              />
+            )}
+          />
+          <TouchableOpacity
+            disabled={!watch().search || isFetching}
+            style={[
+              styles.iconContainer,
+              (!watch().search || isFetching) && {
+                ...styles.iconContainer,
+                backgroundColor: COLORS.GRAY,
+              },
+            ]}
+            onPress={handleSubmit(onSubmit)}
+          >
+            <SearchLens stroke={COLORS.WHITE} />
+          </TouchableOpacity>
         </View>
-      )}
+        {isFetching && <ActivityIndicator color={COLORS.PRIMARY} size={26} />}
+        {!isFetching && shows && <List shows={shows} />}
+      </View>
     </View>
   );
 }
