@@ -35,16 +35,21 @@ export const HOME: Home = StyleSheet.create({
     justifyContent: UTILS.FLEX_BETWEEN,
   },
   input: {
+    flex: 1,
     fontFamily: FONTS.POPPINS_SEMIBOLD_600,
     fontSize: 16,
     color: COLORS.OPAQUE,
   },
   iconContainer: {
+    height: 32,
+    width: 32,
+    borderRadius: 32 / 2, // 'half of icon size + padding'
+    padding: 10,
     marginLeft: 12,
-    padding: 8,
     backgroundColor: COLORS.PRIMARY,
-    borderRadius: 20, // 'half of icon size + padding'
     justifyContent: UTILS.CENTER,
     alignItems: UTILS.CENTER,
+    alignSelf: UTILS.CENTER,
+    zIndex: 2,
   },
 });

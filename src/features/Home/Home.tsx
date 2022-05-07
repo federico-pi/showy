@@ -70,7 +70,9 @@ function Home(): ReactElement {
 
   return (
     <View style={[styles.container, styles.content]}>
-      {isFetching && <ActivityIndicator />}
+      {isFetching && (
+        <ActivityIndicator color={COLORS.PRIMARY} size={'large'} />
+      )}
       {!isFetching && (
         <View style={styles.searchWrapper}>
           <Controller
@@ -90,8 +92,14 @@ function Home(): ReactElement {
           />
           <TouchableOpacity
             disabled={!watch().search}
+            style={[
+              styles.iconContainer,
+              !watch().search && {
+                ...styles.iconContainer,
+                backgroundColor: COLORS.GRAY,
+              },
+            ]}
             onPress={handleSubmit(onSubmit)}
-            style={styles.iconContainer}
           >
             <SearchLens stroke={COLORS.WHITE} />
           </TouchableOpacity>
