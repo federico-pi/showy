@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Keyboard,
 } from 'react-native';
 
 import { AxiosResponse } from 'axios';
@@ -46,6 +47,7 @@ function Home(): ReactElement {
 
   const onSubmit = async ({ search }: Record<string, string>) => {
     setIsFetching(true);
+    Keyboard.dismiss();
 
     /**
      * Smoothening search to loader transition
@@ -79,12 +81,13 @@ function Home(): ReactElement {
             control={control}
             name={FormsEnums.FORM_FIELDS.SEARCH} // 'search'
             rules={{ required: true }}
-            render={({ field: { value, onChange } }) => (
+            render={({ field: { name, value, onChange } }) => (
               <TextInput
                 style={styles.input}
                 placeholder={
                   shows ? 'Perform another search' : 'Search for a show'
                 }
+                accessibilityLabel={name}
                 value={value}
                 onChangeText={onChange}
                 autoCorrect={false}
@@ -103,7 +106,10 @@ function Home(): ReactElement {
             ]}
             onPress={handleSubmit(onSubmit)}
           >
-            <SearchLens stroke={COLORS.WHITE} />
+            <SearchLens
+              accessibilityLabel={'pressableicon'}
+              stroke={COLORS.WHITE}
+            />
           </TouchableOpacity>
         </View>
         {isFetching && <ActivityIndicator color={COLORS.PRIMARY} size={26} />}
