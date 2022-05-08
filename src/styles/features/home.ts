@@ -14,7 +14,7 @@ type Home =
       input: TextStyleExtended;
       iconContainer: ViewStyle;
     }
-  | StylesModels.AnyModel;
+  | StylesModels.AnyObject;
 
 type List =
   | {
@@ -22,7 +22,7 @@ type List =
       grow: ViewStyle;
       spacer: ViewStyle;
     }
-  | StylesModels.AnyModel;
+  | StylesModels.AnyObject;
 
 type Card =
   | {
@@ -31,7 +31,7 @@ type Card =
       title: TextStyleExtended;
       lastItem: ViewStyle;
     }
-  | StylesModels.AnyModel;
+  | StylesModels.AnyObject;
 
 export const HOME: Home = StyleSheet.create({
   container: {

@@ -1,5 +1,5 @@
 /**
- * Fixing react-native-linear-gradient dependency import
+ * Mocking react-native-linear-gradient imports
  */
 import { View } from 'react-native';
 

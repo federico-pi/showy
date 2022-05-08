@@ -33,7 +33,7 @@ function Home(): ReactElement {
   );
 
   /**
-   * The form handler
+   * The search input handler
    */
   const { control, watch, handleSubmit, reset } = useForm();
 
@@ -47,17 +47,20 @@ function Home(): ReactElement {
   const onSubmit = async ({ search }: Record<string, string>) => {
     setIsFetching(true);
 
-    // For transitioning loader smoothly
-    await AppHelpers.sleep(1750);
+    /**
+     * Smoothening search to loader transition
+     * For demo purposes only
+     */
+    await AppHelpers.sleep(1250);
 
     try {
-      await getTvmazeData({ q: search }, ApiEnums.GET_TYPES.SEARCH).then(
+      await getTvmazeData({ q: search }, ApiEnums.REQUEST_TYPES.SEARCH).then(
         (res: AxiosResponse<ApiModels.TvmazeSearchResponse[]>) => {
           if (res.data.length) {
             return setShows(res.data as ApiModels.SearchResponse[]);
           }
 
-          Alert.alert("Couldn't find any show for your search, try again!");
+          Alert.alert("Couldn't find shows for your search, please try again!");
         }
       );
 

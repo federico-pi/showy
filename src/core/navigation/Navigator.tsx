@@ -30,15 +30,8 @@ function Navigator(): ReactElement {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName={ROUTES.HOME}
     >
-      {/**
-       * The home screen
-       */}
       <Stack.Screen name={ROUTES.HOME} component={Home} />
-      {/**
-       * The details screen
-       */}
       <Stack.Screen name={ROUTES.DETAILS} component={Details} />
     </Stack.Navigator>
   );

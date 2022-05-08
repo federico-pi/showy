@@ -1,25 +1,26 @@
 import React, { ReactElement } from 'react';
-import { ImageBackground, Text, TouchableOpacity, View } from 'react-native';
+import { ImageBackground, TouchableOpacity, View } from 'react-native';
 
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
-import { Rating } from 'react-native-ratings';
 
 import { ChevronLeft } from '~assets/images';
 import { ApiModels } from '~shared/models';
 import { COLORS } from '~styles/defaults';
 import { DetailsFeatureStyles } from '~styles/features';
 
+import { Info } from './components/Info';
+
 const { DETAILS: styles } = DetailsFeatureStyles;
 
 /**
- * The details screen component
+ * The main details screen component
  */
 function Details(): ReactElement {
   const navigation = useNavigation();
 
   /**
-   * Fetching params data
+   * Fetching route params data
    */
   const route: RouteProp<
     {
@@ -48,41 +49,15 @@ function Details(): ReactElement {
         <LinearGradient
           style={styles.gradient}
           colors={[
-            /**
-             * Specifying colors this way as a library requirement
-             */
             'rgba(255, 255, 255, 0)',
             'rgba(255, 255, 255, 0.5)',
             'rgba(255, 255, 255, 1)',
           ]}
-          // Defining the gradient brak points
+          // Defining gradients break points
           locations={[0.05, 0.4, 0.95]}
         />
       </ImageBackground>
-      <View style={styles.info}>
-        <Text numberOfLines={1} style={styles.title}>
-          {show.name}
-        </Text>
-        <Text
-          style={styles.summary}
-          numberOfLines={show.rating.average ? 3 : 4}
-        >
-          {show.summary
-            .replace('<p>', '')
-            .replace('</p>', '')
-            .replace('<b>', '')
-            .replace('</b>', '')}
-        </Text>
-        {show.rating.average && (
-          <Rating
-            style={styles.rating}
-            showRating={false}
-            startingValue={+show.rating.average / 2}
-            readonly
-            imageSize={24}
-          />
-        )}
-      </View>
+      <Info show={show} />
     </View>
   );
 }

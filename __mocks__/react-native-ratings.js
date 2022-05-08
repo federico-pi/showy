@@ -1,5 +1,5 @@
 /**
- * Fixing react-native-ratings dependency import
+ * Mocking react-native-ratings imports
  */
 import { View } from 'react-native';
 

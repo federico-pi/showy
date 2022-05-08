@@ -18,11 +18,17 @@ interface ListProps {
 }
 
 /**
- * The list component to render the shows as cards
+ * The list of shows
  */
 function List({ shows }: ListProps): ReactElement {
+  const keyExtractor = useCallback(
+    (item: unknown, index: number) => index.toString(),
+    []
+  );
+
   /**
-   * Filtering only the shows with image or title (for challenge purposes only)
+   * Making sure each show has an image, a name, a summary, and isn't already in the list
+   * For UI only purposes
    */
   const filteredShows = useCallback(
     (
@@ -32,9 +38,6 @@ function List({ shows }: ListProps): ReactElement {
 
       showsUnfiltered.forEach((show: ApiModels.SearchResponse) => {
         const { show: item } = show;
-        /**
-         * Making sure each show has an image, a name, a summary, and isn't already in the list
-         */
         if (
           !!item.image &&
           !!item.name &&
@@ -56,14 +59,6 @@ function List({ shows }: ListProps): ReactElement {
   );
 
   /**
-   * Generic key extractor
-   */
-  const keyExtractor = useCallback(
-    (item: unknown, index: number) => index.toString(),
-    []
-  );
-
-  /**
    * Rendering the card items
    */
   const renderItem = ({
@@ -80,14 +75,13 @@ function List({ shows }: ListProps): ReactElement {
   return (
     <FlatList
       style={styles.grow}
+      horizontal
       data={filteredShows(shows)}
-      ItemSeparatorComponent={() => <View style={styles.spacer} />}
       keyExtractor={keyExtractor}
       renderItem={renderItem}
-      horizontal
+      ItemSeparatorComponent={() => <View style={styles.spacer} />}
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
-      onEndReachedThreshold={0.2}
     />
   );
 }

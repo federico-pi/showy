@@ -12,12 +12,18 @@ type Details =
       chevronContainer: ViewStyle;
       image: ViewStyle;
       gradient: ViewStyle;
-      info: ViewStyle;
+    }
+  | StylesModels.AnyObject;
+
+type Info =
+  | {
+      container: ViewStyle;
+      content: ViewStyle;
       title: TextStyleExtended;
       summary: TextStyleExtended;
       rating: ViewStyle;
     }
-  | StylesModels.AnyModel;
+  | StylesModels.AnyObject;
 
 export const DETAILS: Details = StyleSheet.create({
   container: {
@@ -47,10 +53,15 @@ export const DETAILS: Details = StyleSheet.create({
     width, // Full screen dimensions
     height: 60,
   },
-  info: {
+});
+
+export const INFO: Info = StyleSheet.create({
+  container: {
+    flex: 0.2,
+  },
+  content: {
     padding: 16,
     paddingTop: 8,
-    flex: 0.2,
   },
   title: {
     fontFamily: FONTS.POPPINS_BOLD_700,

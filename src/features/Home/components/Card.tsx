@@ -18,7 +18,7 @@ interface CardProps {
 }
 
 /**
- * The shows cards
+ * The cards for the shwows
  */
 function Card({ item, isLast }: CardProps): ReactElement {
   const navigation = useNavigation();
@@ -28,7 +28,8 @@ function Card({ item, isLast }: CardProps): ReactElement {
   return (
     <TouchableOpacity
       style={[styles.container, isLast && styles.lastItem]}
-      onPress={() => navigation.navigate(RoutesEnums.ROUTES.DETAILS, { item })} // Transferring item to details screen as param
+      // Transferring item to details screen as param
+      onPress={() => navigation.navigate(RoutesEnums.ROUTES.DETAILS, { item })}
     >
       <Image
         style={styles.image}

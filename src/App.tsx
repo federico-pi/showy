@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
 
 import RNBootSplash from 'react-native-bootsplash';
-import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { Main } from '~core/Main';
 
-// The React Query client for caching the data
-const queryClient = new QueryClient();
-
 /**
- * The root app component
+ * The root application component
  */
 const App = () => {
   useEffect(() => {
@@ -20,6 +16,10 @@ const App = () => {
     init().finally(() => {
       let timeout: ReturnType<typeof setTimeout>;
 
+      /**
+       * Adding a short timeout before fading the splashscreen
+       * For demo purposes only
+       */
       timeout = setTimeout(
         async () => await RNBootSplash.hide({ fade: true }),
         2250
@@ -29,11 +29,7 @@ const App = () => {
     });
   }, []);
 
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Main />
-    </QueryClientProvider>
-  );
+  return <Main />;
 };
 
 export default App;

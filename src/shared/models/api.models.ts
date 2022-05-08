@@ -1,14 +1,14 @@
 import { ApiEnums } from '~shared/enums';
 
 /**
- * The props allowed for the search type param
+ * The allowed types of api calls
  */
-export type SearchTypes = ApiEnums.GET_TYPES;
+export type SearchTypes = ApiEnums.REQUEST_TYPES;
 
 /**
- * The response based on search types
+ * The api response based on diffrent types
  */
-export type TvmazeSearchResponse = [] | SearchResponse;
+export type TvmazeSearchResponse = SearchResponse;
 
 /**
  * The search Tvmaze API response interface
