@@ -1,17 +1,17 @@
 import { ApiEnums } from '~shared/enums';
 
 /**
- * The allowed types of api calls
+ * Available type of searches to the api call
  */
-export type SearchTypes = ApiEnums.REQUEST_TYPES;
+export type TypeOfSearch = ApiEnums.REQUEST_TYPES;
 
 /**
- * The api response based on diffrent types
+ * Different api responses based on the type of search
  */
 export type TvmazeSearchResponse = SearchResponse;
 
 /**
- * The search Tvmaze API response interface
+ * Tvmaze search response interface
  */
 export interface SearchResponse {
   score: number;

@@ -1,5 +1,5 @@
 /**
- * The fields for the form
+ * Fields for the form
  */
 export enum FORM_FIELDS {
   SEARCH = 'search',

@@ -1,7 +1,7 @@
 import { ApiModels } from '.';
 
 /**
- * The props required for each screen
+ * Defining the params for each screen
  */
 export type RootStackParamList = {
   search: undefined;

@@ -1,5 +1,5 @@
 /**
- * The available routes for navigation
+ * Available routes for navigation
  */
 export enum ROUTES {
   SEARCH = 'search',
