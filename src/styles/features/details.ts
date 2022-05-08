@@ -1,4 +1,4 @@
-import { ViewStyle, StyleSheet, Dimensions } from 'react-native';
+import { ViewStyle, StyleSheet, Dimensions, Platform } from 'react-native';
 
 import { StylesModels } from '~shared/models';
 import { COLORS, FONTS, TextStyleExtended, UTILS } from '~styles/defaults';
@@ -52,7 +52,7 @@ export const DETAILS: Details = StyleSheet.create({
   },
   gradient: {
     width, // Full screen dimensions
-    height: 60,
+    height: Platform.OS === 'android' ? 45 : 60,
   },
 });
 
