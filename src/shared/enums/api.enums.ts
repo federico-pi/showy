@@ -6,6 +6,9 @@ export enum REQUEST_TYPES {
   GENERIC = 'generic',
 }
 
+/**
+ * Show airing status
+ */
 export enum SHOW_STATUS {
   ENDED = 'Ended',
   RUNNING = 'Running',

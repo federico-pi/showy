@@ -41,7 +41,7 @@ export const SEARCH: Search = StyleSheet.create({
     backgroundColor: COLORS.WHITE,
     justifyContent: UTILS.CENTER,
     alignItems: UTILS.CENTER,
-    paddingTop: 20,
+    paddingTop: 25,
   },
   searchWrapper: {
     flexDirection: UTILS.FLEX_ROW,
@@ -79,7 +79,7 @@ export const SEARCH: Search = StyleSheet.create({
 
 export const LIST: List = StyleSheet.create({
   container: {
-    height: 320,
+    height: 335,
     justifyContent: UTILS.FLEX_BETWEEN,
   },
   grow: {

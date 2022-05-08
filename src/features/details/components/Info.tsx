@@ -61,7 +61,7 @@ function Info({ show }: InfoProps): ReactElement {
             style={styles.rating}
             showRating={false}
             startingValue={+show.rating.average / 2}
-            imageSize={22}
+            imageSize={20}
             readonly
           />
         )}

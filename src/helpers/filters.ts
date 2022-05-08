@@ -8,9 +8,9 @@ import { ApiModels } from '~shared/models';
  */
 export async function getFilteredShows(
   unfilteredShows: ApiModels.Show[],
-  shows?: ApiModels.Show[]
+  previousShows?: ApiModels.Show[]
 ): Promise<ApiModels.Show[]> {
-  let list: ApiModels.Show[] = shows ?? [];
+  let list: ApiModels.Show[] = previousShows ?? [];
 
   unfilteredShows.forEach((show: ApiModels.Show, index) => {
     if (

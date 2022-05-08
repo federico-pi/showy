@@ -11,7 +11,7 @@ exports[`snapshot 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "justifyContent": "center",
-        "paddingTop": 20,
+        "paddingTop": 25,
       },
     ]
   }
@@ -20,14 +20,14 @@ exports[`snapshot 1`] = `
     style={
       Array [
         Object {
-          "height": 320,
+          "height": 335,
           "justifyContent": "space-between",
         },
         Object {
           "alignItems": "center",
           "backgroundColor": "#fff",
           "justifyContent": "center",
-          "paddingTop": 20,
+          "paddingTop": 25,
         },
       ]
     }

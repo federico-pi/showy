@@ -20,7 +20,7 @@ describe('search functionality', () => {
     expect(foundTextInput).toBeTruthy();
   });
 
-  it('should change text and press button', async () => {
+  it("should change text to 'cats' and press button", async () => {
     const mockOnSubmit = jest.fn();
     const { getByTestId } = render(<Search mockOnSubmit={mockOnSubmit} />);
 
