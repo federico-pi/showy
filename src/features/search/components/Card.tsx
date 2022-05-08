@@ -31,7 +31,7 @@ function Card({ show }: CardProps): ReactElement {
           uri: show.image?.medium,
         }}
       />
-      <Text numberOfLines={1} style={styles.title}>
+      <Text style={styles.title} numberOfLines={1}>
         {show.name}
       </Text>
     </TouchableOpacity>

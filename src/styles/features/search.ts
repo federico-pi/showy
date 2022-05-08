@@ -79,7 +79,7 @@ export const SEARCH: Search = StyleSheet.create({
 
 export const LIST: List = StyleSheet.create({
   container: {
-    height: 335,
+    height: 345,
     justifyContent: UTILS.FLEX_BETWEEN,
   },
   grow: {
@@ -93,7 +93,7 @@ export const LIST: List = StyleSheet.create({
 export const CARD: Card = StyleSheet.create({
   container: {
     height: 220,
-    width: 120,
+    width: 115,
     marginLeft: 24,
   },
   image: {
@@ -101,9 +101,9 @@ export const CARD: Card = StyleSheet.create({
     borderRadius: 12,
   },
   title: {
+    marginTop: 12,
     fontFamily: FONTS.POPPINS_REGULAR_400,
     fontSize: 16,
     color: COLORS.OPAQUE,
-    marginTop: 14,
   },
 });

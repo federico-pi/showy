@@ -20,7 +20,7 @@ exports[`snapshot 1`] = `
     style={
       Array [
         Object {
-          "height": 335,
+          "height": 345,
           "justifyContent": "space-between",
         },
         Object {
