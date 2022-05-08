@@ -1,6 +1,9 @@
-# NewStore Challenge - App - React-Native
+# Coding Challenge - App - React-Native
 
 App built as a challenge to NewStore technical interview.
+
+### User story
+As a user I would like to search for TV show names so I can know more about the details of the TV show like summary, when it will be aired (if it’s still running), the average rating and also see a picture of the TV show.
 
 ---
 

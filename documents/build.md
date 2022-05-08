@@ -5,8 +5,7 @@ How to build an APK or IPA with RN?
 ## Debuggable APK
 
 1. Run one of the following commands:
-   1. `build:android:debug`
-   2. `build:android:staging`
+   1. `build:android:development`
 2. Open Android Studio 
 3. Open the **BUILD** menu voice of Android Studio
 4. Now build the APK or the bundle via **Build bundle(s) / APK(s)**
@@ -18,8 +17,7 @@ How to build an APK or IPA with RN?
 ## Debuggable IPA
 
 1. Run one of the following commands:
-   1. `build:ios:debug`
-   2. `build:ios:staging`
+   1. `build:ios:development`
 2. Open xCode
 3. Make sure that your scheme is in **RELEASE**, to do so, open the **Product** menu voice, then **Scheme** > **Edit scheme** move from `Debug` to `Release`
 4. **Product** > **Archive** then export the bundle as development IPA
@@ -40,7 +38,11 @@ You can find the reference in the **AppDelegate.m** file:
 
 ## Android
 
-Just run the release build option via **Build** > **Generate signed bundle / APK**
+Just run the release build option via **Build** > **Generate signed bundle / APK**, or by running the following command in the root folder: 
+
+```bash
+$ cd android && ./gradlew clean && ./gradlew assembleRelease && cd .. && open .
+```
 
 ## iOS
 
