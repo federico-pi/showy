@@ -1,7 +1,6 @@
 import 'react-native-url-polyfill/auto';
 import 'intl-pluralrules';
 import 'react-native-gesture-handler';
-import './i18n';
 
 import { AppRegistry } from 'react-native';
 
