@@ -5,7 +5,7 @@ import { create, act } from 'react-test-renderer';
 import App from '../src/App';
 
 /**
- * Testing that the entire app renders correctly
+ * Testing that the app renders with defaults
  */
 test('renders correctly with defaults', () => {
   let app;

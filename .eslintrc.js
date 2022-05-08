@@ -1,6 +1,9 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  env: {
+    'jest/globals': true,
+  },
   plugins: [
     '@typescript-eslint',
     'import',

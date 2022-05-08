@@ -12,6 +12,9 @@ const mockData = {
   show: TvMazeMockData,
 };
 
+/**
+ * Mocking useNavigation and useRoute hooks
+ */
 jest.mock('@react-navigation/native', () => {
   const actualNav = jest.requireActual('@react-navigation/native');
   return {
