@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 
 import { Rating } from 'react-native-ratings';
 
+import { useOS } from '~hooks';
 import { ApiModels } from '~shared/models';
 import { DetailsFeatureStyles } from '~styles/features';
 
@@ -19,8 +20,12 @@ interface InfoProps {
  * The Info details component
  */
 function Info({ show }: InfoProps): ReactElement {
+  const { isAndroid } = useOS();
+
   return (
-    <View style={[styles.container, styles.content]}>
+    <View
+      style={[styles.container, styles.content, isAndroid && styles.bottom]}
+    >
       <Text numberOfLines={1} style={styles.title}>
         {show.name}
       </Text>

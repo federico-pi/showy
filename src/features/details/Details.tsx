@@ -49,6 +49,7 @@ function Details(): ReactElement {
         <LinearGradient
           style={styles.gradient}
           colors={[
+            // Transparent to white
             'rgba(255, 255, 255, 0)',
             'rgba(255, 255, 255, 0.5)',
             'rgba(255, 255, 255, 1)',

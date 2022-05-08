@@ -22,6 +22,7 @@ type Info =
       title: TextStyleExtended;
       summary: TextStyleExtended;
       rating: ViewStyle;
+      bottom: ViewStyle;
     }
   | StylesModels.AnyObject;
 
@@ -47,7 +48,7 @@ export const DETAILS: Details = StyleSheet.create({
   image: {
     width, // Full screen dimensions
     justifyContent: UTILS.FLEX_END,
-    flex: 0.8,
+    flex: 0.78,
   },
   gradient: {
     width, // Full screen dimensions
@@ -57,7 +58,7 @@ export const DETAILS: Details = StyleSheet.create({
 
 export const INFO: Info = StyleSheet.create({
   container: {
-    flex: 0.2,
+    flex: 0.22,
   },
   content: {
     padding: 16,
@@ -76,5 +77,8 @@ export const INFO: Info = StyleSheet.create({
   },
   rating: {
     marginTop: 10,
+  },
+  bottom: {
+    marginBottom: 4,
   },
 });
