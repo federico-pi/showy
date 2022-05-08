@@ -15,7 +15,6 @@ module.exports = {
           '~core': './src/core',
           '~helpers': './src/helpers',
           '~hooks': './src/hooks',
-          '~mocks': './src/mocks',
           '~shared': './src/shared',
           '~stores': './src/stores',
           '~styles': './src/styles',

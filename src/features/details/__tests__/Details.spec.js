@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { create, act } from 'react-test-renderer';
+import { fireEvent, render } from '@testing-library/react-native';
+import { act } from 'react-test-renderer';
 
 import { Details } from '../Details';
 
@@ -30,12 +31,19 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-test('snapshot', () => {
-  let tree;
+describe('navigation', () => {
+  it('should go back to previous screen', async () => {
+    const mockNavigation = {
+      goBack: jest.fn(),
+    };
+    jest.spyOn(mockNavigation, 'goBack');
 
-  act(() => {
-    tree = create(<Details />);
+    const { getByTestId } = render(<Details mockNavigation={mockNavigation} />);
+
+    await act(async () => {
+      fireEvent.press(getByTestId('back'));
+    });
+
+    expect(mockNavigation.goBack).toHaveBeenCalled();
   });
-
-  expect(tree).toMatchSnapshot();
 });

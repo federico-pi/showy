@@ -13,7 +13,11 @@ import { Info } from './components/Info';
 
 const { DETAILS: styles } = DetailsFeatureStyles;
 
-function Details(): ReactElement {
+interface DetailsProps {
+  mockNavigation?: { goBack: jest.Mock<any, any> };
+}
+
+function Details({ mockNavigation }: DetailsProps): ReactElement {
   const navigation = useNavigation();
 
   /**
@@ -34,9 +38,11 @@ function Details(): ReactElement {
     <View style={[styles.container, styles.content]}>
       <TouchableOpacity
         style={styles.chevronContainer}
-        onPress={() => navigation.goBack()}
+        onPress={() =>
+          mockNavigation ? mockNavigation.goBack() : navigation.goBack()
+        }
       >
-        <ChevronLeft stroke={COLORS.OPAQUE} />
+        <ChevronLeft testID={'back'} stroke={COLORS.OPAQUE} />
       </TouchableOpacity>
       <ImageBackground
         style={styles.image}

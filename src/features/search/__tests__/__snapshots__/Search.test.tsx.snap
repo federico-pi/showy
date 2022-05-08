@@ -45,7 +45,6 @@ exports[`snapshot 1`] = `
       }
     >
       <TextInput
-        accessibilityLabel="search"
         autoCapitalize="none"
         autoCorrect={false}
         onChangeText={[Function]}
@@ -58,6 +57,7 @@ exports[`snapshot 1`] = `
             "fontSize": 16,
           }
         }
+        testID="search"
       />
       <View
         accessibilityState={
@@ -92,8 +92,8 @@ exports[`snapshot 1`] = `
         }
       >
         <SvgMock
-          accessibilityLabel="searchicon"
           stroke="#fff"
+          testID="searchicon"
         />
       </View>
     </View>

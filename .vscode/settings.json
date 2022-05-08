@@ -10,7 +10,6 @@
     "features",
     "helpers",
     "hooks",
-    "mocks",
     "shared",
     "stores",
     "styles",

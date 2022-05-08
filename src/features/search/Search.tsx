@@ -23,7 +23,11 @@ import { List } from './components/List';
 
 const { SEARCH: styles, LIST: listStyles } = SearchFeatureStyles;
 
-function Search(): ReactElement {
+interface SearchProps {
+  mockOnSubmit?: jest.Mock<any, any>;
+}
+
+function Search({ mockOnSubmit }: SearchProps): ReactElement {
   const [isFetching, setIsFetching] = useState(false);
 
   const [shows, setShows] = useState<ApiModels.SearchResponse[] | undefined>(
@@ -83,7 +87,7 @@ function Search(): ReactElement {
                 placeholder={
                   shows ? 'Perform another search' : 'Search for a show'
                 }
-                accessibilityLabel={name}
+                testID={name} // 'search'
                 value={value}
                 onChangeText={onChange}
                 autoCorrect={false}
@@ -100,12 +104,9 @@ function Search(): ReactElement {
                 backgroundColor: COLORS.GRAY,
               },
             ]}
-            onPress={handleSubmit(onSubmit)}
+            onPress={handleSubmit(mockOnSubmit ?? onSubmit)}
           >
-            <SearchLens
-              accessibilityLabel={'searchicon'}
-              stroke={COLORS.WHITE}
-            />
+            <SearchLens testID={'searchicon'} stroke={COLORS.WHITE} />
           </TouchableOpacity>
         </View>
         {isFetching && <ActivityIndicator color={COLORS.PRIMARY} size={26} />}

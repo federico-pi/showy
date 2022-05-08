@@ -42,6 +42,7 @@ exports[`snapshot 1`] = `
   >
     <SvgMock
       stroke="#191D30"
+      testID="back"
     />
   </View>
   <View
