@@ -57,6 +57,7 @@ function Search({ mockOnSubmit }: SearchProps): ReactElement {
       await getTvmazeData({ q: search }, ApiEnums.REQUEST_TYPES.SEARCH).then(
         (res: AxiosResponse<ApiModels.TvmazeSearchResponse[]>) => {
           if (res.data.length) {
+            console.log(res.data.length);
             return setShows(res.data as ApiModels.SearchResponse[]);
           }
 
@@ -109,7 +110,13 @@ function Search({ mockOnSubmit }: SearchProps): ReactElement {
             <SearchLens testID={'searchicon'} stroke={COLORS.WHITE} />
           </TouchableOpacity>
         </View>
-        {isFetching && <ActivityIndicator color={COLORS.PRIMARY} size={26} />}
+        {isFetching && (
+          <ActivityIndicator
+            style={styles.loader}
+            color={COLORS.PRIMARY}
+            size={26}
+          />
+        )}
         {!isFetching && shows && <List shows={shows} />}
       </View>
     </View>

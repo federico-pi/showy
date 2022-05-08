@@ -4,7 +4,9 @@ import { Text, View } from 'react-native';
 import { Rating } from 'react-native-ratings';
 
 import { useOS } from '~hooks';
+import { ApiEnums } from '~shared/enums';
 import { ApiModels } from '~shared/models';
+import { FONTS } from '~styles/defaults';
 import { DetailsFeatureStyles } from '~styles/features';
 
 const { INFO: styles } = DetailsFeatureStyles;
@@ -15,7 +17,7 @@ interface InfoProps {
 
 function Info({ show }: InfoProps): ReactElement {
   const { isAndroid } = useOS();
-
+  console.log(JSON.stringify(show));
   return (
     <View
       style={[styles.container, styles.content, isAndroid && styles.bottom]}
@@ -23,21 +25,47 @@ function Info({ show }: InfoProps): ReactElement {
       <Text numberOfLines={1} style={styles.title}>
         {show.name}
       </Text>
-      <Text style={styles.summary} numberOfLines={show.rating.average ? 3 : 4}>
+      <Text style={styles.summary} numberOfLines={3}>
         {/**
-         * Parsing html tags from the api summary response
+         * Filtering html tags from the api summary response
          */}
         {show.summary.replace(/(<([^>]+)>)/gi, '')}
       </Text>
-      {show.rating.average && (
-        <Rating
-          style={styles.rating}
-          imageSize={24}
-          startingValue={+show.rating.average / 2}
-          readonly
-          showRating={false}
-        />
-      )}
+      <View style={show.rating.average && styles.extra}>
+        <View>
+          <View style={styles.status}>
+            <Text style={styles.label}>{'Premiered:'}</Text>
+            <Text style={styles.aired}>
+              {show.premiered?.split('-').reverse().join('-')}
+            </Text>
+          </View>
+          <View style={styles.status}>
+            <Text style={styles.label}>{'Status:'}</Text>
+            <Text
+              style={[
+                styles.aired,
+                show.status &&
+                  show.status === ApiEnums.SHOW_STATUS.ENDED && {
+                    fontFamily: FONTS.POPPINS_REGULAR_400,
+                  },
+              ]}
+            >
+              {show.status && show.status === ApiEnums.SHOW_STATUS.ENDED
+                ? 'Ended ' + show.ended?.split('-').reverse().join('-')
+                : 'Currently airing'}
+            </Text>
+          </View>
+        </View>
+        {show.rating.average && (
+          <Rating
+            style={styles.rating}
+            showRating={false}
+            startingValue={+show.rating.average / 2}
+            imageSize={22}
+            readonly
+          />
+        )}
+      </View>
     </View>
   );
 }

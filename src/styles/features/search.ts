@@ -1,4 +1,4 @@
-import { Dimensions, ViewStyle, StyleSheet } from 'react-native';
+import { Dimensions, ViewStyle, StyleSheet, Platform } from 'react-native';
 
 import { SharedModels } from '~shared/models';
 
@@ -13,6 +13,7 @@ type Search =
       searchWrapper: ViewStyle;
       input: TextStyleExtended;
       iconContainer: ViewStyle;
+      loader: ViewStyle;
     }
   | SharedModels.AnyObject;
 
@@ -41,16 +42,17 @@ export const SEARCH: Search = StyleSheet.create({
     backgroundColor: COLORS.WHITE,
     justifyContent: UTILS.CENTER,
     alignItems: UTILS.CENTER,
+    paddingTop: 20,
   },
   searchWrapper: {
     flexDirection: UTILS.FLEX_ROW,
     backgroundColor: COLORS.SILVER,
-    paddingVertical: 12,
+    paddingVertical: Platform.OS === 'android' ? 10 : 12,
     paddingHorizontal: 16,
     borderRadius: 12,
-    width: width - 48,
+    width: width - 46,
     justifyContent: UTILS.FLEX_BETWEEN,
-    marginBottom: 32,
+    marginBottom: 28,
   },
   input: {
     flex: 1,
@@ -69,6 +71,10 @@ export const SEARCH: Search = StyleSheet.create({
     alignItems: UTILS.CENTER,
     alignSelf: UTILS.CENTER,
     zIndex: 2,
+  },
+  loader: {
+    flex: 1,
+    justifyContent: UTILS.CENTER,
   },
 });
 
@@ -89,7 +95,7 @@ export const CARD: Card = StyleSheet.create({
   container: {
     height: 220,
     width: 120,
-    marginLeft: 28,
+    marginLeft: 24,
   },
   image: {
     flex: 1,
@@ -102,6 +108,6 @@ export const CARD: Card = StyleSheet.create({
     marginTop: 14,
   },
   lastItem: {
-    marginRight: 28,
+    marginRight: 24,
   },
 });

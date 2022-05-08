@@ -49,7 +49,7 @@ exports[`snapshot 1`] = `
     accessibilityIgnoresInvertColors={true}
     style={
       Object {
-        "flex": 0.78,
+        "flex": 0.76,
         "justifyContent": "flex-end",
         "width": 750,
       }
@@ -106,7 +106,7 @@ exports[`snapshot 1`] = `
     style={
       Array [
         Object {
-          "flex": 0.22,
+          "flex": 0.24,
         },
         Object {
           "padding": 16,
@@ -129,18 +129,92 @@ exports[`snapshot 1`] = `
       Under the Dome
     </Text>
     <Text
-      numberOfLines={4}
+      numberOfLines={3}
       style={
         Object {
           "color": "#191D30",
           "fontFamily": "Poppins-Regular",
           "fontSize": 16,
+          "marginBottom": 12,
           "marginTop": 4,
         }
       }
     >
       Under the Dome is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.
     </Text>
+    <View
+      style={null}
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#191D30",
+                "fontFamily": "Poppins-SemiBold",
+                "fontSize": 15,
+                "marginRight": 10,
+              }
+            }
+          >
+            Premiered:
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#191D30",
+                "fontFamily": "Roboto Mono",
+                "fontSize": 15,
+              }
+            }
+          >
+            24-06-2013
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#191D30",
+                "fontFamily": "Poppins-SemiBold",
+                "fontSize": 15,
+                "marginRight": 10,
+              }
+            }
+          >
+            Status:
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#191D30",
+                  "fontFamily": "Roboto Mono",
+                  "fontSize": 15,
+                },
+                Object {
+                  "fontFamily": "Poppins-Regular",
+                },
+              ]
+            }
+          >
+            Ended 10-09-2015
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
 </View>
 `;

@@ -5,15 +5,15 @@ import { act } from 'react-test-renderer';
 
 import { Search } from '../Search';
 
-describe('form', () => {
-  it('should find the button via id', () => {
+describe('search functionality', () => {
+  test('find the button via id', () => {
     const { getByTestId } = render(<Search />);
     const foundButton = getByTestId('searchicon');
 
     expect(foundButton).toBeTruthy();
   });
 
-  it('should find the text input via id', () => {
+  test('should find the text input via id', () => {
     const { getByTestId } = render(<Search />);
     const foundTextInput = getByTestId('search');
 

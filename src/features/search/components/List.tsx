@@ -63,6 +63,8 @@ function List({ shows }: ListProps): ReactElement {
     return <Card item={item} isLast={isLast} />;
   };
 
+  console.log(filteredShows(shows).length);
+
   return (
     <FlatList
       style={styles.grow}
@@ -73,6 +75,7 @@ function List({ shows }: ListProps): ReactElement {
       ItemSeparatorComponent={() => <View style={styles.spacer} />}
       showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
+      initialNumToRender={20}
     />
   );
 }

@@ -11,6 +11,13 @@ export type TypeOfSearch = ApiEnums.REQUEST_TYPES;
 export type TvmazeSearchResponse = SearchResponse;
 
 /**
+ * The show airing status
+ */
+export type ShowStatus =
+  | ApiEnums.SHOW_STATUS.ENDED
+  | ApiEnums.SHOW_STATUS.RUNNING;
+
+/**
  * Tvmaze search response interface
  */
 export interface SearchResponse {
@@ -29,7 +36,7 @@ export interface Show {
   runtime?: number | null;
   averageRuntime?: number | null;
   premiered?: string | null;
-  ended?: string | null;
+  ended?: ShowStatus | null;
   officialSite?: string | null;
   schedule: Schedule;
   rating: Rating;

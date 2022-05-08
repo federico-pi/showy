@@ -21,7 +21,9 @@ type Info =
       content: ViewStyle;
       title: TextStyleExtended;
       summary: TextStyleExtended;
+      extra: ViewStyle;
       rating: ViewStyle;
+      aired: TextStyleExtended;
       bottom: ViewStyle;
     }
   | SharedModels.AnyObject;
@@ -48,7 +50,7 @@ export const DETAILS: Details = StyleSheet.create({
   image: {
     width, // Full screen dimensions
     justifyContent: UTILS.FLEX_END,
-    flex: 0.78,
+    flex: 0.76,
   },
   gradient: {
     width, // Full screen dimensions
@@ -58,7 +60,7 @@ export const DETAILS: Details = StyleSheet.create({
 
 export const INFO: Info = StyleSheet.create({
   container: {
-    flex: 0.22,
+    flex: 0.24,
   },
   content: {
     padding: 16,
@@ -74,11 +76,32 @@ export const INFO: Info = StyleSheet.create({
     fontSize: 16,
     color: COLORS.OPAQUE,
     marginTop: 4,
+    marginBottom: 12,
+  },
+  extra: {
+    flexDirection: UTILS.FLEX_ROW,
+    justifyContent: UTILS.FLEX_BETWEEN,
   },
   rating: {
-    marginTop: 10,
+    justifyContent: UTILS.CENTER,
+    marginRight: 4,
+  },
+  status: {
+    flexDirection: UTILS.FLEX_ROW,
+  },
+  label: {
+    color: COLORS.OPAQUE,
+    fontFamily: FONTS.POPPINS_SEMIBOLD_600,
+    fontSize: 15,
+    marginRight: 10,
+  },
+  aired: {
+    color: COLORS.OPAQUE,
+    fontFamily:
+      Platform.OS === 'ios' ? FONTS.ROBOTO_MONO_IOS : FONTS.ROBOTO_MONO,
+    fontSize: 15,
   },
   bottom: {
-    marginBottom: 4,
+    marginBottom: 6,
   },
 });
