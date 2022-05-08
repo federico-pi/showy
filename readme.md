@@ -1,6 +1,6 @@
 # NewStore Challenge - App - React-Native
 
-App built as a challenge to NewStore technical interview
+App built as a challenge to NewStore technical interview.
 
 ---
 
@@ -8,32 +8,32 @@ App built as a challenge to NewStore technical interview
 
 1. [Development](#development)
 2. [Project](#project)
+3. [Tests](#tests)
 
 ## Development
 
 In order to develop on this project you need to have [yarn](https://yarnpkg.com/) installed.
 
-After the clone of the project (via HTTPS or SSH, it's your choose), you need to install the deps with:
+After the clone of the project (via HTTPS or SSH, it's your choose), you can install the deps with:
 
 ```bash
-$ yarn install
-$ cd ios && pod install && cd ..
+$ yarn install && cd ios && pod install && cd ..
 ```
 
-To run the project on a device/emulator while developing, run:
+To run the project on a device or emulator, run:
 
 ```bash
 $ yarn (android|ios) // based on the target os.
 ```
 
-If you want to know all the available scripts and what they do, run:
+## Project
 
-```bash
-$ yarn scripts
-```
+The project structure is based on a model that promotes components cleanliness and scalability.
 
 ### Project Structure and common folders
 
+    - /__tests__ *-> tests run here*
+    - /__mocks__ *-> mock dependencies and data*
     - /components *-> react components*
     - /models *-> ts interfaces*
     - /api *-> all services that take care of the communication between the app and an API*
@@ -44,3 +44,25 @@ $ yarn scripts
     - /hooks *-> react custom hooks*
     - /shared *-> global shared and reusable components. layout, navigation, form, buttons.*
     - /styles *-> stylesheets, css*
+
+## Tests
+
+All tests are written using jest.
+
+To execute tests, run:
+
+```bash
+$ yarn test
+```
+
+To override existing snapshots, run:
+
+```bash
+$ yarn test -u
+```
+
+To access all available scripts, run:
+
+```bash
+$ yarn scripts
+```
