@@ -10,20 +10,19 @@ import { SearchFeatureStyles } from '~styles/features';
 const { CARD: styles } = SearchFeatureStyles;
 
 interface CardProps {
-  item: ApiModels.SearchResponse;
-  isLast: boolean;
+  show: ApiModels.Show;
 }
 
-function Card({ item, isLast }: CardProps): ReactElement {
+function Card({ show }: CardProps): ReactElement {
   const navigation = useNavigation();
-
-  const { show } = item;
 
   return (
     <TouchableOpacity
-      style={[styles.container, isLast && styles.lastItem]}
+      style={styles.container}
       // Transferring the selected item to the details screen as param
-      onPress={() => navigation.navigate(RoutesEnums.ROUTES.DETAILS, { item })}
+      onPress={() =>
+        navigation.navigate(RoutesEnums.ROUTES.DETAILS, { data: show })
+      }
     >
       <Image
         style={styles.image}

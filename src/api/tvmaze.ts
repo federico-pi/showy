@@ -21,12 +21,19 @@ export async function getTvmazeData(
    */
   switch (searchType) {
     case ApiEnums.REQUEST_TYPES.SEARCH:
-    default:
       url = `${BASE_URL}/search/shows`;
 
       return axios.get(url, {
         params,
         paramsSerializer: (parameters) => qs.stringify(parameters),
       }) as Promise<AxiosResponse<ApiModels.SearchResponse[]>>;
+    case ApiEnums.REQUEST_TYPES.GENERIC:
+    default:
+      url = `${BASE_URL}/shows`;
+
+      return axios.get(url, {
+        params,
+        paramsSerializer: (parameters) => qs.stringify(parameters),
+      }) as Promise<AxiosResponse<ApiModels.Show[]>>;
   }
 }

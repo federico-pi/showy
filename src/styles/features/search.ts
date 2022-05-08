@@ -30,7 +30,6 @@ type Card =
       container: ViewStyle;
       image: ViewStyle;
       title: TextStyleExtended;
-      lastItem: ViewStyle;
     }
   | SharedModels.AnyObject;
 
@@ -106,8 +105,5 @@ export const CARD: Card = StyleSheet.create({
     fontSize: 16,
     color: COLORS.OPAQUE,
     marginTop: 14,
-  },
-  lastItem: {
-    marginRight: 24,
   },
 });

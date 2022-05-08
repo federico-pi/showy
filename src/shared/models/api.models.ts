@@ -3,12 +3,14 @@ import { ApiEnums } from '~shared/enums';
 /**
  * Available type of searches to the api call
  */
-export type TypeOfSearch = ApiEnums.REQUEST_TYPES;
+export type TypeOfSearch =
+  | ApiEnums.REQUEST_TYPES.GENERIC
+  | ApiEnums.REQUEST_TYPES.SEARCH;
 
 /**
  * Different api responses based on the type of search
  */
-export type TvmazeSearchResponse = SearchResponse;
+export type TvmazeSearchResponse = SearchResponse | Show;
 
 /**
  * The show airing status

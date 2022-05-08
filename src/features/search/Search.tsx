@@ -8,12 +8,11 @@ import {
   Keyboard,
 } from 'react-native';
 
-import { AxiosResponse } from 'axios';
 import { Controller, useForm } from 'react-hook-form';
 
 import { getTvmazeData } from '~api';
 import { SearchLens } from '~assets/images';
-import { AppHelpers } from '~helpers';
+import { AppHelpers, FiltersHelpers } from '~helpers';
 import { ApiEnums, FormsEnums } from '~shared/enums';
 import { ApiModels } from '~shared/models';
 import { COLORS } from '~styles/defaults';
@@ -30,14 +29,13 @@ interface SearchProps {
 function Search({ mockOnSubmit }: SearchProps): ReactElement {
   const [isFetching, setIsFetching] = useState(false);
 
-  const [shows, setShows] = useState<ApiModels.SearchResponse[] | undefined>(
-    undefined
-  );
+  const [shows, setShows] = useState<ApiModels.Show[] | undefined>(undefined);
 
   const { control, watch, handleSubmit, reset } = useForm();
 
   const handleError = (e: unknown) => {
     console.error(e);
+
     reset();
     setIsFetching(false);
     Alert.alert('Something went wrong, try again!');
@@ -55,10 +53,17 @@ function Search({ mockOnSubmit }: SearchProps): ReactElement {
 
     try {
       await getTvmazeData({ q: search }, ApiEnums.REQUEST_TYPES.SEARCH).then(
-        (res: AxiosResponse<ApiModels.TvmazeSearchResponse[]>) => {
-          if (res.data.length) {
-            console.log(res.data.length);
-            return setShows(res.data as ApiModels.SearchResponse[]);
+        async (res: any) => {
+          if (res.data) {
+            let showsList: ApiModels.Show[] = [];
+
+            res.data.forEach((item: ApiModels.SearchResponse) => {
+              showsList.push(item.show);
+            });
+
+            const response = await FiltersHelpers.getFilteredShows(showsList);
+
+            return setShows(response);
           }
 
           Alert.alert(
@@ -117,7 +122,7 @@ function Search({ mockOnSubmit }: SearchProps): ReactElement {
             size={26}
           />
         )}
-        {!isFetching && shows && <List shows={shows} />}
+        {!isFetching && shows && <List shows={shows} setShows={setShows} />}
       </View>
     </View>
   );

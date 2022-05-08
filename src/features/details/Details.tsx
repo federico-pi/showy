@@ -26,13 +26,13 @@ function Details({ mockNavigation }: DetailsProps): ReactElement {
   const route: RouteProp<
     {
       params: {
-        item: ApiModels.SearchResponse;
+        data: ApiModels.Show;
       };
     },
     'params'
   > = useRoute();
 
-  const { show } = route.params.item;
+  const { data: show } = route.params;
 
   return (
     <View style={[styles.container, styles.content]}>
@@ -46,7 +46,7 @@ function Details({ mockNavigation }: DetailsProps): ReactElement {
       </TouchableOpacity>
       <ImageBackground
         style={styles.image}
-        source={{ uri: show.image?.original }}
+        source={{ uri: show.image?.original ?? show.image?.medium }}
         resizeMode={'cover'}
       >
         <LinearGradient

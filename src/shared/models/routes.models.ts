@@ -5,5 +5,5 @@ import { ApiModels } from '.';
  */
 export type RootStackParamList = {
   search: undefined;
-  details: { item: ApiModels.SearchResponse };
+  details: { data: ApiModels.Show };
 };

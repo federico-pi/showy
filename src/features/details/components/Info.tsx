@@ -17,7 +17,7 @@ interface InfoProps {
 
 function Info({ show }: InfoProps): ReactElement {
   const { isAndroid } = useOS();
-  console.log(JSON.stringify(show));
+
   return (
     <View
       style={[styles.container, styles.content, isAndroid && styles.bottom]}

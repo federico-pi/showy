@@ -1,8 +1,15 @@
-import React, { ReactElement, useCallback } from 'react';
-import { FlatList, ListRenderItemInfo, View } from 'react-native';
+import React, {
+  Dispatch,
+  ReactElement,
+  SetStateAction,
+  useCallback,
+  useState,
+} from 'react';
+import { Alert, FlatList, ListRenderItemInfo, View } from 'react-native';
 
-import _ from 'lodash';
-
+import { getTvmazeData } from '~api';
+import { FiltersHelpers } from '~helpers';
+import { ApiEnums } from '~shared/enums';
 import { ApiModels } from '~shared/models';
 import { SearchFeatureStyles } from '~styles/features';
 
@@ -11,71 +18,65 @@ import { Card } from './Card';
 const { LIST: styles } = SearchFeatureStyles;
 
 interface ListProps {
-  shows: ApiModels.SearchResponse[];
+  shows: ApiModels.Show[];
+  setShows: Dispatch<SetStateAction<ApiModels.Show[] | undefined>>;
 }
 
-function List({ shows }: ListProps): ReactElement {
+function List({ shows, setShows }: ListProps): ReactElement {
+  const [pageParam, setPageParam] = useState(1);
+
   const keyExtractor = useCallback(
     (item: unknown, index: number) => index.toString(),
     []
   );
 
-  /**
-   * Making sure each show has an image, a name, a summary, and isn't already in the list
-   * For demo purposes only
-   */
-  const filteredShows = useCallback(
-    (
-      showsUnfiltered: ApiModels.SearchResponse[]
-    ): ApiModels.SearchResponse[] => {
-      let list: ApiModels.SearchResponse[] = [];
-
-      showsUnfiltered.forEach((show: ApiModels.SearchResponse) => {
-        const { show: item } = show;
-        if (
-          !!item.image &&
-          !!item.name &&
-          !!item.summary &&
-          (!_.has(list, item.name) || !_.has(list, item.id))
-        ) {
-          // Pushing shows with a rating at the start
-          if (item.rating.average) {
-            return list.unshift(show);
-          }
-
-          return list.push(show);
-        }
-      });
-
-      return list;
-    },
-    []
+  const renderItem = ({ item }: ListRenderItemInfo<ApiModels.Show>) => (
+    <Card show={item} />
   );
 
-  const renderItem = ({
-    item,
-    index,
-  }: ListRenderItemInfo<ApiModels.SearchResponse>) => {
-    const isLast =
-      filteredShows(shows).length > 1 &&
-      filteredShows(shows).length - 1 === index;
+  const handleError = (e: unknown) => {
+    console.error(e);
 
-    return <Card item={item} isLast={isLast} />;
+    setPageParam(1);
+    Alert.alert('Something went wrong, try again!');
   };
 
-  console.log(filteredShows(shows).length);
+  const onEndReached = async () => {
+    try {
+      await getTvmazeData(
+        { page: `${pageParam}`, limit: '1' },
+        ApiEnums.REQUEST_TYPES.GENERIC
+      ).then(async (res) => {
+        if (res.data.length) {
+          const newFilteredResponse = await FiltersHelpers.getFilteredShows(
+            res.data as ApiModels.Show[],
+            shows
+          );
+
+          return setShows(newFilteredResponse);
+        }
+
+        Alert.alert("Couldn't fetch any more data, try another search!");
+      });
+
+      setPageParam((prevPage) => prevPage + 1);
+    } catch (e) {
+      handleError(e);
+    }
+  };
 
   return (
     <FlatList
       style={styles.grow}
-      horizontal
-      data={filteredShows(shows)}
+      data={shows}
       keyExtractor={keyExtractor}
       renderItem={renderItem}
-      ItemSeparatorComponent={() => <View style={styles.spacer} />}
+      initialNumToRender={10}
+      horizontal
       showsHorizontalScrollIndicator={false}
-      showsVerticalScrollIndicator={false}
-      initialNumToRender={20}
+      ItemSeparatorComponent={() => <View style={styles.spacer} />}
+      onEndReachedThreshold={0.2}
+      onEndReached={onEndReached}
     />
   );
 }
