@@ -4,11 +4,7 @@
   "name": "Under the Dome",
   "type": "Scripted",
   "language": "English",
-  "genres": [
-    "Drama",
-    "Science-Fiction",
-    "Thriller"
-  ],
+  "genres": ["Drama", "Science-Fiction", "Thriller"],
   "status": "Ended",
   "runtime": 60,
   "averageRuntime": 60,
@@ -17,11 +13,10 @@
   "officialSite": "http://www.cbs.com/shows/under-the-dome/",
   "schedule": {
     "time": "22:00",
-    "days": [
-"Thursday" ]
+    "days": ["Thursday"]
   },
   "rating": {
-    "average": 6.5
+    "average": null
   },
   "weight": 98,
   "network": {
@@ -31,7 +26,7 @@
       "name": "United States",
       "code": "US",
       "timezone": "America/New_York"
-},
+    },
     "officialSite": "https://www.cbs.com/"
   },
   "webChannel": null,
@@ -40,7 +35,8 @@
     "tvrage": 25988,
     "thetvdb": 264492,
     "imdb": "tt1553656"
-}, "image": {
+  },
+  "image": {
     "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
     "original": "https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"
   },
@@ -53,4 +49,5 @@
     "previousepisode": {
       "href": "https://api.tvmaze.com/episodes/185054"
     }
-} }
+  }
+}

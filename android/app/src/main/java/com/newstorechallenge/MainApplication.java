@@ -12,6 +12,8 @@ import com.facebook.soloader.SoLoader;
 import com.newstore.challenge.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.facebook.react.bridge.JSIModulePackage; // react-native-reanimated configuration
+import com.swmansion.reanimated.ReanimatedJSIModulePackage; // react-native-reanimated configuration
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -35,6 +37,11 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSMainModuleName() {
           return "index";
         }
+
+        @Override
+        protected JSIModulePackage getJSIModulePackage() {
+        return new ReanimatedJSIModulePackage();
+      }
       };
 
   private final ReactNativeHost mNewArchitectureNativeHost =

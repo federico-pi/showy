@@ -29,5 +29,6 @@ module.exports = {
         path: 'environments/.env',
       },
     ],
+    'react-native-reanimated/plugin',
   ],
 };
