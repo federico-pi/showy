@@ -6,7 +6,7 @@ import { RoutesEnums } from '~shared/enums';
 import { RootStackParamList } from '~shared/models/routes.models';
 
 import { Details } from '../../features/details/Details';
-import { Home } from '../../features/Home/Home';
+import { Search } from '../../features/search/Search';
 
 const { ROUTES } = RoutesEnums;
 
@@ -21,9 +21,6 @@ declare global {
   }
 }
 
-/**
- * Root stack navigator component
- */
 function Navigator(): ReactElement {
   return (
     <Stack.Navigator
@@ -31,7 +28,7 @@ function Navigator(): ReactElement {
         headerShown: false,
       }}
     >
-      <Stack.Screen name={ROUTES.HOME} component={Home} />
+      <Stack.Screen name={ROUTES.SEARCH} component={Search} />
       <Stack.Screen name={ROUTES.DETAILS} component={Details} />
     </Stack.Navigator>
   );

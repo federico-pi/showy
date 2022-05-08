@@ -13,14 +13,11 @@ import { Info } from './components/Info';
 
 const { DETAILS: styles } = DetailsFeatureStyles;
 
-/**
- * The main details screen component
- */
 function Details(): ReactElement {
   const navigation = useNavigation();
 
   /**
-   * Fetching route params data
+   * Fetching data from route params
    */
   const route: RouteProp<
     {
@@ -49,7 +46,7 @@ function Details(): ReactElement {
         <LinearGradient
           style={styles.gradient}
           colors={[
-            // Transparent to white
+            // Transitioning from transparent to white
             'rgba(255, 255, 255, 0)',
             'rgba(255, 255, 255, 0.5)',
             'rgba(255, 255, 255, 1)',

@@ -9,16 +9,10 @@ import { DetailsFeatureStyles } from '~styles/features';
 
 const { INFO: styles } = DetailsFeatureStyles;
 
-/**
- * The shape of the props
- */
 interface InfoProps {
   show: ApiModels.Show;
 }
 
-/**
- * The Info details component
- */
 function Info({ show }: InfoProps): ReactElement {
   const { isAndroid } = useOS();
 

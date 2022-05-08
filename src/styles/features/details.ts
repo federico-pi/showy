@@ -1,6 +1,6 @@
 import { ViewStyle, StyleSheet, Dimensions, Platform } from 'react-native';
 
-import { StylesModels } from '~shared/models';
+import { SharedModels } from '~shared/models';
 import { COLORS, FONTS, TextStyleExtended, UTILS } from '~styles/defaults';
 
 const { width } = Dimensions.get('window');
@@ -13,7 +13,7 @@ type Details =
       image: ViewStyle;
       gradient: ViewStyle;
     }
-  | StylesModels.AnyObject;
+  | SharedModels.AnyObject;
 
 type Info =
   | {
@@ -24,7 +24,7 @@ type Info =
       rating: ViewStyle;
       bottom: ViewStyle;
     }
-  | StylesModels.AnyObject;
+  | SharedModels.AnyObject;
 
 export const DETAILS: Details = StyleSheet.create({
   container: {

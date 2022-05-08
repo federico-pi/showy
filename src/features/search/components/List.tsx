@@ -4,22 +4,16 @@ import { FlatList, ListRenderItemInfo, View } from 'react-native';
 import _ from 'lodash';
 
 import { ApiModels } from '~shared/models';
-import { HomeFeatureStyles } from '~styles/features';
+import { SearchFeatureStyles } from '~styles/features';
 
 import { Card } from './Card';
 
-const { LIST: styles } = HomeFeatureStyles;
+const { LIST: styles } = SearchFeatureStyles;
 
-/**
- * The shape of the props
- */
 interface ListProps {
   shows: ApiModels.SearchResponse[];
 }
 
-/**
- * The list of shows
- */
 function List({ shows }: ListProps): ReactElement {
   const keyExtractor = useCallback(
     (item: unknown, index: number) => index.toString(),
@@ -28,7 +22,7 @@ function List({ shows }: ListProps): ReactElement {
 
   /**
    * Making sure each show has an image, a name, a summary, and isn't already in the list
-   * For UI only purposes
+   * For demo purposes only
    */
   const filteredShows = useCallback(
     (
@@ -58,9 +52,6 @@ function List({ shows }: ListProps): ReactElement {
     []
   );
 
-  /**
-   * Rendering the card items
-   */
   const renderItem = ({
     item,
     index,

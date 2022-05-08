@@ -2,6 +2,6 @@
  * The available routes for navigation
  */
 export enum ROUTES {
-  HOME = 'home',
+  SEARCH = 'search',
   DETAILS = 'details',
 }

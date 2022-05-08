@@ -17,32 +17,26 @@ import { AppHelpers } from '~helpers';
 import { ApiEnums, FormsEnums } from '~shared/enums';
 import { ApiModels } from '~shared/models';
 import { COLORS } from '~styles/defaults';
-import { HomeFeatureStyles } from '~styles/features';
+import { SearchFeatureStyles } from '~styles/features';
 
 import { List } from './components/List';
 
-const { HOME: styles, LIST: listStyles } = HomeFeatureStyles;
+const { SEARCH: styles, LIST: listStyles } = SearchFeatureStyles;
 
-/**
- * The main home screen component
- */
-function Home(): ReactElement {
+function Search(): ReactElement {
   const [isFetching, setIsFetching] = useState(false);
 
   const [shows, setShows] = useState<ApiModels.SearchResponse[] | undefined>(
     undefined
   );
 
-  /**
-   * The search input handler
-   */
   const { control, watch, handleSubmit, reset } = useForm();
 
   const handleError = (e: unknown) => {
     console.error(e);
     reset();
     setIsFetching(false);
-    Alert.alert('Oh no. Something went wrong!');
+    Alert.alert('Something went wrong, try again!');
   };
 
   const onSubmit = async ({ search }: Record<string, string>) => {
@@ -50,7 +44,7 @@ function Home(): ReactElement {
     Keyboard.dismiss();
 
     /**
-     * Smoothening search to loader transition
+     * Smoothening the search transition
      * For demo purposes only
      */
     await AppHelpers.sleep(1250);
@@ -62,7 +56,9 @@ function Home(): ReactElement {
             return setShows(res.data as ApiModels.SearchResponse[]);
           }
 
-          Alert.alert("Couldn't find shows for your search, please try again!");
+          Alert.alert(
+            "Couldn't find shows for your search, try another search!"
+          );
         }
       );
 
@@ -107,7 +103,7 @@ function Home(): ReactElement {
             onPress={handleSubmit(onSubmit)}
           >
             <SearchLens
-              accessibilityLabel={'pressableicon'}
+              accessibilityLabel={'searchicon'}
               stroke={COLORS.WHITE}
             />
           </TouchableOpacity>
@@ -119,4 +115,4 @@ function Home(): ReactElement {
   );
 }
 
-export { Home };
+export { Search };

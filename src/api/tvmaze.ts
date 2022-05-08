@@ -8,8 +8,7 @@ import { ApiModels } from '~shared/models';
 /**
  * Getting the data from tvmaze api
  * @param params
- * @param searchType
- * @returns Promise<ResponseModels.ResponseSchema<ApiModels.TvmazeSearchResponse>>
+ * @param ApiModels.SearchTypes
  */
 export async function getTvmazeData(
   params: Record<string, string>,

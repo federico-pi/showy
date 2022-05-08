@@ -5,21 +5,15 @@ import { useNavigation } from '@react-navigation/native';
 
 import { RoutesEnums } from '~shared/enums';
 import { ApiModels } from '~shared/models';
-import { HomeFeatureStyles } from '~styles/features';
+import { SearchFeatureStyles } from '~styles/features';
 
-const { CARD: styles } = HomeFeatureStyles;
+const { CARD: styles } = SearchFeatureStyles;
 
-/**
- * The shape of the props
- */
 interface CardProps {
   item: ApiModels.SearchResponse;
   isLast: boolean;
 }
 
-/**
- * The cards for the shwows
- */
 function Card({ item, isLast }: CardProps): ReactElement {
   const navigation = useNavigation();
 
@@ -28,7 +22,7 @@ function Card({ item, isLast }: CardProps): ReactElement {
   return (
     <TouchableOpacity
       style={[styles.container, isLast && styles.lastItem]}
-      // Transferring item to details screen as param
+      // Transferring the selected item to the details screen as param
       onPress={() => navigation.navigate(RoutesEnums.ROUTES.DETAILS, { item })}
     >
       <Image

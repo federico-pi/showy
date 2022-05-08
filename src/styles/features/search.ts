@@ -1,12 +1,12 @@
 import { Dimensions, ViewStyle, StyleSheet } from 'react-native';
 
-import { StylesModels } from '~shared/models';
+import { SharedModels } from '~shared/models';
 
 import { COLORS, FONTS, TextStyleExtended, UTILS } from '~styles/defaults';
 
 const { width } = Dimensions.get('window');
 
-type Home =
+type Search =
   | {
       container: ViewStyle;
       content: ViewStyle;
@@ -14,7 +14,7 @@ type Home =
       input: TextStyleExtended;
       iconContainer: ViewStyle;
     }
-  | StylesModels.AnyObject;
+  | SharedModels.AnyObject;
 
 type List =
   | {
@@ -22,7 +22,7 @@ type List =
       grow: ViewStyle;
       spacer: ViewStyle;
     }
-  | StylesModels.AnyObject;
+  | SharedModels.AnyObject;
 
 type Card =
   | {
@@ -31,9 +31,9 @@ type Card =
       title: TextStyleExtended;
       lastItem: ViewStyle;
     }
-  | StylesModels.AnyObject;
+  | SharedModels.AnyObject;
 
-export const HOME: Home = StyleSheet.create({
+export const SEARCH: Search = StyleSheet.create({
   container: {
     flex: 1,
   },

@@ -1,4 +1,4 @@
 import * as DetailsFeatureStyles from './details';
-import * as HomeFeatureStyles from './home';
+import * as SearchFeatureStyles from './search';
 
-export { DetailsFeatureStyles, HomeFeatureStyles };
+export { DetailsFeatureStyles, SearchFeatureStyles };
