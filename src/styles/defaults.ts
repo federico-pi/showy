@@ -4,6 +4,10 @@ export type TextStyleExtended = Omit<TextStyle, 'fontSize'> & {
   fontSize: number | string | undefined;
 };
 
+export type AnyStyleObject = {
+  [key: string]: any;
+};
+
 export enum COLORS {
   TRANSPARENT = 'transparent',
   WHITE = '#fff',

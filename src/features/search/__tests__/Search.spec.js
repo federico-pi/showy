@@ -13,7 +13,7 @@ describe('search functionality', () => {
     expect(foundButton).toBeTruthy();
   });
 
-  test('should find the text input via id', () => {
+  test('find the text input via id', () => {
     const { getByTestId } = render(<Search />);
     const foundTextInput = getByTestId('search');
 

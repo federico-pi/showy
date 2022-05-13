@@ -1,8 +1,12 @@
 import { Dimensions, ViewStyle, StyleSheet, Platform } from 'react-native';
 
-import { SharedModels } from '~shared/models';
-
-import { COLORS, FONTS, TextStyleExtended, UTILS } from '~styles/defaults';
+import {
+  COLORS,
+  FONTS,
+  TextStyleExtended,
+  UTILS,
+  AnyStyleObject,
+} from '~styles/defaults';
 
 const { width } = Dimensions.get('window');
 
@@ -15,7 +19,7 @@ type Search =
       iconContainer: ViewStyle;
       loader: ViewStyle;
     }
-  | SharedModels.AnyObject;
+  | AnyStyleObject;
 
 type List =
   | {
@@ -23,7 +27,7 @@ type List =
       grow: ViewStyle;
       spacer: ViewStyle;
     }
-  | SharedModels.AnyObject;
+  | AnyStyleObject;
 
 type Card =
   | {
@@ -31,7 +35,7 @@ type Card =
       image: ViewStyle;
       title: TextStyleExtended;
     }
-  | SharedModels.AnyObject;
+  | AnyStyleObject;
 
 export const SEARCH: Search = StyleSheet.create({
   container: {

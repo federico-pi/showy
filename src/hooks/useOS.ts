@@ -8,7 +8,7 @@ interface UseOS {
 }
 
 /**
- * Exposes the OS platform
+ * Exposing the OS platform
  */
 export function useOS(): UseOS {
   const [isAndroid] = useState(Platform.OS === 'android');

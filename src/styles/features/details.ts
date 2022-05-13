@@ -1,7 +1,12 @@
 import { ViewStyle, StyleSheet, Dimensions, Platform } from 'react-native';
 
-import { SharedModels } from '~shared/models';
-import { COLORS, FONTS, TextStyleExtended, UTILS } from '~styles/defaults';
+import {
+  COLORS,
+  FONTS,
+  TextStyleExtended,
+  UTILS,
+  AnyStyleObject,
+} from '~styles/defaults';
 
 const { width } = Dimensions.get('window');
 
@@ -13,7 +18,7 @@ type Details =
       image: ViewStyle;
       gradient: ViewStyle;
     }
-  | SharedModels.AnyObject;
+  | AnyStyleObject;
 
 type Info =
   | {
@@ -23,10 +28,12 @@ type Info =
       summary: TextStyleExtended;
       extra: ViewStyle;
       rating: ViewStyle;
+      status: ViewStyle;
+      label: TextStyleExtended;
       aired: TextStyleExtended;
       bottom: ViewStyle;
     }
-  | SharedModels.AnyObject;
+  | AnyStyleObject;
 
 export const DETAILS: Details = StyleSheet.create({
   container: {
