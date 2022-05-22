@@ -1,18 +1,28 @@
 {
-  "name": "newstorechallenge",
-  "version": "0.0.1",
-  "private": true,
+  "name": "react-native-challenge",
+  "version": "0.1",
+  "private": false,
   "scripts": {
+    "i": "yarn install",
+    "i:pods": "cd ios && pod install && cd ..",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "build:android:dev": "cross-env APP_ENV=dev react-native bundle --reset-cache --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/",
-    "build:ios:dev": "cross-env APP_ENV=dev react-native bundle --reset-cache --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/",
-    "test": "jest",
+    "c:cache": "react-native start --reset-cache",
+    "c:modules": "rm -rf node_modules && yarn install",
+    "c:pods": "cd ios && pod deintegrate && pod install && cd ..",
+    "c:android": "cd android && ./gradlew clean && cd ..",
+    "build:ios": "cross-env APP_ENV=dev react-native bundle --reset-cache --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/",
+    "build:android": "cross-env APP_ENV=dev react-native bundle --reset-cache --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/",
+    "debug:apk": "cd android && ./gradlew assembleDebug && open app/build/outputs/apk/debug && cd ..",
+    "release:apk": "cd android && ./gradlew assembleRelease && open app/build/outputs/apk/release && cd ..",
+    "t": "jest",
+    "t:u": "jest --updateSnapshot",
+    "log": "git log --oneline",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --check ./src",
     "prepare": "husky install",
-    "scripts": "npm-scripts-info"
+    "postinstall": "patch-package"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [

@@ -1,4 +1,4 @@
-package com.newstore.challenge;
+package com.reactnative.challenge;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

@@ -8,6 +8,7 @@ import {
   Keyboard,
 } from 'react-native';
 
+import { AxiosResponse } from 'axios';
 import { Controller, useForm } from 'react-hook-form';
 
 import { getTvmazeData } from '~api';
@@ -53,21 +54,22 @@ function Search({ mockOnSubmit }: SearchProps): ReactElement {
 
     try {
       await getTvmazeData({ q: search }, ApiEnums.REQUEST_TYPES.SEARCH).then(
-        async (res: any) => {
+        // @ts-ignore
+        async (res: AxiosResponse<ApiModels.SearchResponse[]>) => {
           if (res.data) {
             let showsList: ApiModels.Show[] = [];
 
-            res.data.forEach((item: ApiModels.SearchResponse) => {
-              showsList.push(item.show);
-            });
+            res.data.forEach((item) => showsList.push(item.show));
 
-            const response = await FiltersHelpers.getFilteredShows(showsList);
+            const filteredResponse = await FiltersHelpers.getFilteredShows(
+              showsList
+            );
 
-            return setShows(response);
+            return setShows(filteredResponse);
           }
 
           Alert.alert(
-            "Couldn't find shows for your search, try another search!"
+            "Couldn't find shows for your search, try something different!"
           );
         }
       );

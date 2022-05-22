@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.newstore.challenge">
+  package="com.reactnative.challenge">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

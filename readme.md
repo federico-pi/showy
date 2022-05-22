@@ -1,6 +1,4 @@
-# Coding Challenge - App - React-Native
-
-App built as a challenge to NewStore technical interview.
+# Coding challenge - React-Native
 
 ### User story
 As a user I would like to search for TV show names so I can know more about the details of the TV show like summary, when it will be aired (if it’s still running), the average rating and also see a picture of the TV show.
@@ -12,21 +10,23 @@ As a user I would like to search for TV show names so I can know more about the 
 1. [Development](#development)
 2. [Project](#project)
 3. [Tests](#tests)
+4. [Notes](#notes)
 
 ## Development
 
 In order to develop on this project you need to have [yarn](https://yarnpkg.com/) installed.
 
-After the clone of the project (via HTTPS or SSH, it's your choose), you can install the deps with:
+After cloning the project (via HTTPS or SSH), you can install the deps with:
 
-```bash
-$ yarn install && cd ios && pod install && cd ..
+```zsh
+$ yarn i
+$ yarn i:pods
 ```
 
-To run the project on a device or emulator, run:
+To run the project on a device/emulator while developing, run:
 
-```bash
-$ yarn (android|ios) // based on the target os.
+```zsh
+$ yarn (android|ios) // based on the target os
 ```
 
 ## Project
@@ -54,18 +54,20 @@ All tests are written using jest.
 
 To execute tests, run:
 
-```bash
-$ yarn test
+```zsh
+$ yarn t
 ```
 
 To override existing snapshots, run:
 
-```bash
-$ yarn test -u
+```zsh
+$ yarn t:u
 ```
+
+## Notes
 
 To access all available scripts, run:
 
-```bash
-$ yarn scripts
+```zsh
+$ yarn run
 ```

@@ -10,7 +10,7 @@ export type TypeOfSearch =
 /**
  * Different api responses based on the type of search
  */
-export type TvmazeSearchResponse = SearchResponse | Show;
+export type TvmazeSearchResponse = SearchResponse[] | Show[];
 
 /**
  * The show airing status
