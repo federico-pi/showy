@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* newstorechallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* newstorechallengeTests.m */; };
+		00E356F31AD99517003FC87E /* showyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* showyTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		368EB56A32BBA20C543120B3 /* libPods-newstorechallenge-newstorechallengeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A0F37CA8AD54C926C1214E /* libPods-newstorechallenge-newstorechallengeTests.a */; };
 		36D2F2F24F724F24899CD8F7 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEE7E1ABD7A94B7B8AC20253 /* Poppins-Bold.ttf */; };
 		451BF5CD27904E26AC5C61AA /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE223B9E74054804B425A62F /* Poppins-Thin.ttf */; };
 		498C97B48B044FF0B467C15C /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14D0D1B3FB624062B5153DAA /* Poppins-ExtraBold.ttf */; };
 		5BC33DEC743E475791B0701B /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 371AA92CFF2D4D75A495BA75 /* Poppins-ExtraLight.ttf */; };
 		5F388C7FFF1145898AEB1EA1 /* RobotoMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F97E302E0240A7860C85E8 /* RobotoMono.ttf */; };
+		6C0066DCAD7B13443FC813D4 /* libPods-showy-showyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8215676C007EAEA18DE1838D /* libPods-showy-showyTests.a */; };
 		7A2AE1E22825B8F100924EB5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2AE1E12825B8F100924EB5 /* BootSplash.storyboard */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A471C18D1C364942A0DFAB2B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23C8E16C54864CEDBA053AE3 /* Poppins-Regular.ttf */; };
@@ -24,7 +24,7 @@
 		B20AEE8705314F6FB38C2794 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF2A02BED0A14977A12569E3 /* Poppins-Medium.ttf */; };
 		D04BAB1FAB91452F8A6473CC /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B74A03B667742FCA844A0A8 /* Poppins-Light.ttf */; };
 		DB78C8FF3DF7453A9E4522A1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844AA588E65349B181A64F83 /* Poppins-SemiBold.ttf */; };
-		E9CEEEAD6A7CC537D4E0E0AF /* libPods-newstorechallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15571D015968638B46FA10A5 /* libPods-newstorechallenge.a */; };
+		F750CD85D64814C28209677E /* libPods-showy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C6FAFFB0B876FF03FA191B /* libPods-showy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,39 +33,39 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = newstorechallenge;
+			remoteInfo = showy;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* newstorechallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newstorechallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* showyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = showyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* newstorechallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newstorechallengeTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* newstorechallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newstorechallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = newstorechallenge/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = newstorechallenge/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = newstorechallenge/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = newstorechallenge/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = newstorechallenge/main.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* showyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = showyTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* showy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = showy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = showy/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = showy/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = showy/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = showy/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = showy/main.m; sourceTree = "<group>"; };
 		14D0D1B3FB624062B5153DAA /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
-		15571D015968638B46FA10A5 /* libPods-newstorechallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newstorechallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C8E16C54864CEDBA053AE3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		29A0F37CA8AD54C926C1214E /* libPods-newstorechallenge-newstorechallengeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-newstorechallenge-newstorechallengeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		371AA92CFF2D4D75A495BA75 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3BE4C62C28446159020BC0C7 /* Pods-showy-showyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showy-showyTests.release.xcconfig"; path = "Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B74A03B667742FCA844A0A8 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		71F97E302E0240A7860C85E8 /* RobotoMono.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = RobotoMono.ttf; path = ../src/assets/fonts/RobotoMono.ttf; sourceTree = "<group>"; };
-		7A2AE1E12825B8F100924EB5 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = newstorechallenge/BootSplash.storyboard; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = newstorechallenge/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A2AE1E12825B8F100924EB5 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = showy/BootSplash.storyboard; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = showy/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8215676C007EAEA18DE1838D /* libPods-showy-showyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-showy-showyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844AA588E65349B181A64F83 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		99E44790232729336F4F4445 /* Pods-newstorechallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newstorechallenge.debug.xcconfig"; path = "Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		B1CC4A1CFCEE1BFD81AC30C3 /* Pods-newstorechallenge-newstorechallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newstorechallenge-newstorechallengeTests.release.xcconfig"; path = "Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		84C6FAFFB0B876FF03FA191B /* libPods-showy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-showy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C566E7BDBDC71389E8B2F2A /* Pods-showy-showyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showy-showyTests.debug.xcconfig"; path = "Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADE77168B50A4C31C87D4428 /* Pods-showy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showy.release.xcconfig"; path = "Target Support Files/Pods-showy/Pods-showy.release.xcconfig"; sourceTree = "<group>"; };
+		B89C1798FC957EA2E5CD1A4B /* Pods-showy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-showy.debug.xcconfig"; path = "Target Support Files/Pods-showy/Pods-showy.debug.xcconfig"; sourceTree = "<group>"; };
 		CF2A02BED0A14977A12569E3 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		DE223B9E74054804B425A62F /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../src/assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		DEE7E1ABD7A94B7B8AC20253 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E019E8E6450D4EEEB10B98CA /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EF0418A723207BD39E774A05 /* Pods-newstorechallenge-newstorechallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newstorechallenge-newstorechallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F11E99AFB3FA3853163FBEF0 /* Pods-newstorechallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newstorechallenge.release.xcconfig"; path = "Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368EB56A32BBA20C543120B3 /* libPods-newstorechallenge-newstorechallengeTests.a in Frameworks */,
+				6C0066DCAD7B13443FC813D4 /* libPods-showy-showyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,20 +81,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9CEEEAD6A7CC537D4E0E0AF /* libPods-newstorechallenge.a in Frameworks */,
+				F750CD85D64814C28209677E /* libPods-showy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* newstorechallengeTests */ = {
+		00E356EF1AD99517003FC87E /* showyTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* newstorechallengeTests.m */,
+				00E356F21AD99517003FC87E /* showyTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = newstorechallengeTests;
+			path = showyTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -105,7 +105,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* newstorechallenge */ = {
+		13B07FAE1A68108700A75B9A /* showy */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -116,15 +116,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = newstorechallenge;
+			name = showy;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				15571D015968638B46FA10A5 /* libPods-newstorechallenge.a */,
-				29A0F37CA8AD54C926C1214E /* libPods-newstorechallenge-newstorechallengeTests.a */,
+				84C6FAFFB0B876FF03FA191B /* libPods-showy.a */,
+				8215676C007EAEA18DE1838D /* libPods-showy-showyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,9 +139,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* newstorechallenge */,
+				13B07FAE1A68108700A75B9A /* showy */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* newstorechallengeTests */,
+				00E356EF1AD99517003FC87E /* showyTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -155,8 +155,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* newstorechallenge.app */,
-				00E356EE1AD99517003FC87E /* newstorechallengeTests.xctest */,
+				13B07F961A680F5B00A75B9A /* showy.app */,
+				00E356EE1AD99517003FC87E /* showyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,10 +181,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				99E44790232729336F4F4445 /* Pods-newstorechallenge.debug.xcconfig */,
-				F11E99AFB3FA3853163FBEF0 /* Pods-newstorechallenge.release.xcconfig */,
-				EF0418A723207BD39E774A05 /* Pods-newstorechallenge-newstorechallengeTests.debug.xcconfig */,
-				B1CC4A1CFCEE1BFD81AC30C3 /* Pods-newstorechallenge-newstorechallengeTests.release.xcconfig */,
+				B89C1798FC957EA2E5CD1A4B /* Pods-showy.debug.xcconfig */,
+				ADE77168B50A4C31C87D4428 /* Pods-showy.release.xcconfig */,
+				9C566E7BDBDC71389E8B2F2A /* Pods-showy-showyTests.debug.xcconfig */,
+				3BE4C62C28446159020BC0C7 /* Pods-showy-showyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -192,47 +192,47 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* newstorechallengeTests */ = {
+		00E356ED1AD99517003FC87E /* showyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "newstorechallengeTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "showyTests" */;
 			buildPhases = (
-				40D2DB9612CA1379FDCE4527 /* [CP] Check Pods Manifest.lock */,
+				F3D2047DC54F897DE968A769 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				24FE41CD85053A32AF047BB4 /* [CP] Embed Pods Frameworks */,
-				547D2F3001C136C3E23D82D6 /* [CP] Copy Pods Resources */,
+				5867AAF358250CAC018B7B0B /* [CP] Embed Pods Frameworks */,
+				390A74F7C72D3CBD4A58F9BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = newstorechallengeTests;
-			productName = newstorechallengeTests;
-			productReference = 00E356EE1AD99517003FC87E /* newstorechallengeTests.xctest */;
+			name = showyTests;
+			productName = showyTests;
+			productReference = 00E356EE1AD99517003FC87E /* showyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* newstorechallenge */ = {
+		13B07F861A680F5B00A75B9A /* showy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "newstorechallenge" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "showy" */;
 			buildPhases = (
-				2803BEAF32B5354630AD73CA /* [CP] Check Pods Manifest.lock */,
+				5409EB2CBA455D5B04154CCB /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				482AD5ECE9F5261725BB2EA7 /* [CP] Embed Pods Frameworks */,
-				D224F02E7A8F2EC1C87C75B8 /* [CP] Copy Pods Resources */,
+				C7216C2C40596F78C04F519C /* [CP] Embed Pods Frameworks */,
+				CA180217006958FDB53BC99D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = newstorechallenge;
-			productName = newstorechallenge;
-			productReference = 13B07F961A680F5B00A75B9A /* newstorechallenge.app */;
+			name = showy;
+			productName = showy;
+			productReference = 13B07F961A680F5B00A75B9A /* showy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "newstorechallenge" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "showy" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -265,8 +265,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* newstorechallenge */,
-				00E356ED1AD99517003FC87E /* newstorechallengeTests */,
+				13B07F861A680F5B00A75B9A /* showy */,
+				00E356ED1AD99517003FC87E /* showyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,24 +316,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		24FE41CD85053A32AF047BB4 /* [CP] Embed Pods Frameworks */ = {
+		390A74F7C72D3CBD4A58F9BD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2803BEAF32B5354630AD73CA /* [CP] Check Pods Manifest.lock */ = {
+		5409EB2CBA455D5B04154CCB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,14 +348,65 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-newstorechallenge-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-showy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		40D2DB9612CA1379FDCE4527 /* [CP] Check Pods Manifest.lock */ = {
+		5867AAF358250CAC018B7B0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-showy-showyTests/Pods-showy-showyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7216C2C40596F78C04F519C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-showy/Pods-showy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-showy/Pods-showy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-showy/Pods-showy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA180217006958FDB53BC99D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-showy/Pods-showy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-showy/Pods-showy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-showy/Pods-showy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3D2047DC54F897DE968A769 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,62 +421,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-newstorechallenge-newstorechallengeTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-showy-showyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		482AD5ECE9F5261725BB2EA7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		547D2F3001C136C3E23D82D6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge-newstorechallengeTests/Pods-newstorechallenge-newstorechallengeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D224F02E7A8F2EC1C87C75B8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newstorechallenge/Pods-newstorechallenge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -454,7 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* newstorechallengeTests.m in Sources */,
+				00E356F31AD99517003FC87E /* showyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +472,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* newstorechallenge */;
+			target = 13B07F861A680F5B00A75B9A /* showy */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -480,14 +480,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF0418A723207BD39E774A05 /* Pods-newstorechallenge-newstorechallengeTests.debug.xcconfig */;
+			baseConfigurationReference = 9C566E7BDBDC71389E8B2F2A /* Pods-showy-showyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = newstorechallengeTests/Info.plist;
+				INFOPLIST_FILE = showyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,17 +501,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/newstorechallenge.app/newstorechallenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/showy.app/showy";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1CC4A1CFCEE1BFD81AC30C3 /* Pods-newstorechallenge-newstorechallengeTests.release.xcconfig */;
+			baseConfigurationReference = 3BE4C62C28446159020BC0C7 /* Pods-showy-showyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = newstorechallengeTests/Info.plist;
+				INFOPLIST_FILE = showyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,19 +525,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/newstorechallenge.app/newstorechallenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/showy.app/showy";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99E44790232729336F4F4445 /* Pods-newstorechallenge.debug.xcconfig */;
+			baseConfigurationReference = B89C1798FC957EA2E5CD1A4B /* Pods-showy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = newstorechallenge/Info.plist;
+				INFOPLIST_FILE = showy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +549,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.showy;
-				PRODUCT_NAME = newstorechallenge;
+				PRODUCT_NAME = showy;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -558,12 +558,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F11E99AFB3FA3853163FBEF0 /* Pods-newstorechallenge.release.xcconfig */;
+			baseConfigurationReference = ADE77168B50A4C31C87D4428 /* Pods-showy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = newstorechallenge/Info.plist;
+				INFOPLIST_FILE = showy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,7 +575,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.showy;
-				PRODUCT_NAME = newstorechallenge;
+				PRODUCT_NAME = showy;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -719,7 +719,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "newstorechallengeTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "showyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -728,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "newstorechallenge" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "showy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -737,7 +737,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "newstorechallenge" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "showy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

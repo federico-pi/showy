@@ -42,7 +42,7 @@
   bridge.surfacePresenter = _bridgeAdapter.surfacePresenter;
 #endif
 
-  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"newstorechallenge", nil);
+  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"showy", nil);
 
   if (@available(iOS 13.0, *)) {
     rootView.backgroundColor = [UIColor systemBackgroundColor];
@@ -55,9 +55,9 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  
+
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
-  
+
   return YES;
 }
 

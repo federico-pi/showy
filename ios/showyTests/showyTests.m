@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface newstorechallengeTests : XCTestCase
+@interface showyTests : XCTestCase
 
 @end
 
-@implementation newstorechallengeTests
+@implementation showyTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

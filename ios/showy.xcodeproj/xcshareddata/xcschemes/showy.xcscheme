@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "newstorechallenge.app"
-               BlueprintName = "newstorechallenge"
-               ReferencedContainer = "container:newstorechallenge.xcodeproj">
+               BuildableName = "showy.app"
+               BlueprintName = "showy"
+               ReferencedContainer = "container:showy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "newstorechallengeTests.xctest"
-               BlueprintName = "newstorechallengeTests"
-               ReferencedContainer = "container:newstorechallenge.xcodeproj">
+               BuildableName = "showyTests.xctest"
+               BlueprintName = "showyTests"
+               ReferencedContainer = "container:showy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "newstorechallenge.app"
-            BlueprintName = "newstorechallenge"
-            ReferencedContainer = "container:newstorechallenge.xcodeproj">
+            BuildableName = "showy.app"
+            BlueprintName = "showy"
+            ReferencedContainer = "container:showy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "newstorechallenge.app"
-            BlueprintName = "newstorechallenge"
-            ReferencedContainer = "container:newstorechallenge.xcodeproj">
+            BuildableName = "showy.app"
+            BlueprintName = "showy"
+            ReferencedContainer = "container:showy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
