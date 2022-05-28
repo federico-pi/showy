@@ -1,4 +1,4 @@
-package com.reactnative.challenge.newarchitecture.modules;
+package com.showy.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

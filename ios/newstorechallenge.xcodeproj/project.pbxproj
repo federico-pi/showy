@@ -548,7 +548,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.reactnative.challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showy;
 				PRODUCT_NAME = newstorechallenge;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -574,7 +574,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.reactnative.challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showy;
 				PRODUCT_NAME = newstorechallenge;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -1,4 +1,4 @@
-package com.reactnative.challenge;
+package com.showy;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

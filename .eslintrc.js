@@ -13,13 +13,13 @@ module.exports = {
   ],
   extends: ['@react-native-community', 'plugin:react-hooks/recommended'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
     'no-unused-vars': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
       'warn',
       {
@@ -30,7 +30,7 @@ module.exports = {
       },
     ],
     'import/order': [
-      'error',
+      'warn',
       {
         alphabetize: {
           order: 'asc',
